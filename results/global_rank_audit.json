@@ -1,0 +1,720 @@
+{
+  "purpose": "Post-hoc evaluator-only analysis after all search winners were locked; not proposal feedback",
+  "dataset": "cifar10-valid",
+  "hp": "200",
+  "training_seed_policy": "Official get_more_info(..., hp=\"200\", iepoch=None, is_random=False): mean over available independent training seeds",
+  "source_archive_sha256": "580fd8f3425fed9f495640b0f12ccb7744f89dec7aff263bd75aed37ab0b8bb6",
+  "normalized_table_sha256": "8e22ae362896a31f12dbed71938063bb39f6fd65b465ab0bcd95c681c7e75bab",
+  "candidate_count": 15625,
+  "rank_rule": "1 + number of encodings with strictly higher validation accuracy",
+  "maximum_validation_accuracy": 91.60666665039064,
+  "global_validation_maximizers": [
+    {
+      "benchmark_index": 6111,
+      "ops": [
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "skip_connect",
+        "nor_conv_3x3",
+        "nor_conv_1x1"
+      ],
+      "val_accuracy": 91.60666665039064,
+      "flops": 153.27297,
+      "params": 1.073466
+    }
+  ],
+  "test_ranking_performed": false,
+  "selected_winners": [
+    {
+      "method": "random",
+      "seed": 0,
+      "val_accuracy": 90.33799998535156,
+      "rank": 582,
+      "regret_percentage_points": 1.2686666650390777,
+      "ops": [
+        "nor_conv_3x3",
+        "nor_conv_1x1",
+        "avg_pool_3x3",
+        "skip_connect",
+        "avg_pool_3x3",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "evolution",
+      "seed": 0,
+      "val_accuracy": 91.32399998209637,
+      "rank": 26,
+      "regret_percentage_points": 0.2826666682942687,
+      "ops": [
+        "nor_conv_3x3",
+        "nor_conv_1x1",
+        "avg_pool_3x3",
+        "skip_connect",
+        "nor_conv_1x1",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "random",
+      "seed": 1,
+      "val_accuracy": 91.32266665039062,
+      "rank": 27,
+      "regret_percentage_points": 0.28400000000002024,
+      "ops": [
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "skip_connect",
+        "none",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "evolution",
+      "seed": 1,
+      "val_accuracy": 91.53333331461589,
+      "rank": 3,
+      "regret_percentage_points": 0.07333333577474832,
+      "ops": [
+        "nor_conv_3x3",
+        "nor_conv_1x1",
+        "nor_conv_3x3",
+        "skip_connect",
+        "nor_conv_3x3",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "random",
+      "seed": 2,
+      "val_accuracy": 91.29999998901367,
+      "rank": 30,
+      "regret_percentage_points": 0.3066666613769655,
+      "ops": [
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "avg_pool_3x3",
+        "skip_connect",
+        "nor_conv_3x3",
+        "nor_conv_1x1"
+      ]
+    },
+    {
+      "method": "evolution",
+      "seed": 2,
+      "val_accuracy": 91.29999998901367,
+      "rank": 30,
+      "regret_percentage_points": 0.3066666613769655,
+      "ops": [
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "avg_pool_3x3",
+        "skip_connect",
+        "nor_conv_3x3",
+        "nor_conv_1x1"
+      ]
+    },
+    {
+      "method": "random",
+      "seed": 3,
+      "val_accuracy": 90.91999998860678,
+      "rank": 191,
+      "regret_percentage_points": 0.6866666617838604,
+      "ops": [
+        "none",
+        "nor_conv_3x3",
+        "skip_connect",
+        "skip_connect",
+        "none",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "evolution",
+      "seed": 3,
+      "val_accuracy": 91.60666665039064,
+      "rank": 1,
+      "regret_percentage_points": 0.0,
+      "ops": [
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "skip_connect",
+        "nor_conv_3x3",
+        "nor_conv_1x1"
+      ]
+    },
+    {
+      "method": "random",
+      "seed": 4,
+      "val_accuracy": 91.05799997802734,
+      "rank": 94,
+      "regret_percentage_points": 0.5486666723632965,
+      "ops": [
+        "nor_conv_3x3",
+        "nor_conv_1x1",
+        "skip_connect",
+        "skip_connect",
+        "none",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "evolution",
+      "seed": 4,
+      "val_accuracy": 91.06399999267578,
+      "rank": 85,
+      "regret_percentage_points": 0.5426666577148609,
+      "ops": [
+        "nor_conv_3x3",
+        "skip_connect",
+        "none",
+        "skip_connect",
+        "nor_conv_3x3",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "random",
+      "seed": 5,
+      "val_accuracy": 90.0573333227539,
+      "rank": 852,
+      "regret_percentage_points": 1.549333327636731,
+      "ops": [
+        "avg_pool_3x3",
+        "nor_conv_1x1",
+        "nor_conv_1x1",
+        "skip_connect",
+        "nor_conv_3x3",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "evolution",
+      "seed": 5,
+      "val_accuracy": 91.05999997924805,
+      "rank": 91,
+      "regret_percentage_points": 0.5466666711425887,
+      "ops": [
+        "nor_conv_3x3",
+        "skip_connect",
+        "nor_conv_1x1",
+        "nor_conv_1x1",
+        "nor_conv_3x3",
+        "skip_connect"
+      ]
+    },
+    {
+      "method": "random",
+      "seed": 6,
+      "val_accuracy": 90.77066664713543,
+      "rank": 302,
+      "regret_percentage_points": 0.836000003255208,
+      "ops": [
+        "nor_conv_3x3",
+        "nor_conv_1x1",
+        "nor_conv_1x1",
+        "skip_connect",
+        "avg_pool_3x3",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "evolution",
+      "seed": 6,
+      "val_accuracy": 89.64599998779298,
+      "rank": 1582,
+      "regret_percentage_points": 1.96066666259766,
+      "ops": [
+        "nor_conv_1x1",
+        "nor_conv_3x3",
+        "none",
+        "nor_conv_3x3",
+        "avg_pool_3x3",
+        "nor_conv_1x1"
+      ]
+    },
+    {
+      "method": "random",
+      "seed": 7,
+      "val_accuracy": 90.3653333227539,
+      "rank": 564,
+      "regret_percentage_points": 1.2413333276367382,
+      "ops": [
+        "none",
+        "nor_conv_3x3",
+        "avg_pool_3x3",
+        "skip_connect",
+        "nor_conv_1x1",
+        "nor_conv_1x1"
+      ]
+    },
+    {
+      "method": "evolution",
+      "seed": 7,
+      "val_accuracy": 91.43999998453778,
+      "rank": 9,
+      "regret_percentage_points": 0.1666666658528584,
+      "ops": [
+        "nor_conv_3x3",
+        "nor_conv_1x1",
+        "nor_conv_3x3",
+        "skip_connect",
+        "nor_conv_3x3",
+        "nor_conv_1x1"
+      ]
+    },
+    {
+      "method": "random",
+      "seed": 8,
+      "val_accuracy": 89.89333332763671,
+      "rank": 1075,
+      "regret_percentage_points": 1.7133333227539254,
+      "ops": [
+        "none",
+        "nor_conv_3x3",
+        "nor_conv_1x1",
+        "nor_conv_3x3",
+        "nor_conv_1x1",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "evolution",
+      "seed": 8,
+      "val_accuracy": 90.8213333178711,
+      "rank": 265,
+      "regret_percentage_points": 0.7853333325195422,
+      "ops": [
+        "skip_connect",
+        "nor_conv_3x3",
+        "none",
+        "nor_conv_3x3",
+        "skip_connect",
+        "nor_conv_1x1"
+      ]
+    },
+    {
+      "method": "random",
+      "seed": 9,
+      "val_accuracy": 90.82133333251954,
+      "rank": 263,
+      "regret_percentage_points": 0.7853333178710926,
+      "ops": [
+        "none",
+        "nor_conv_3x3",
+        "none",
+        "skip_connect",
+        "skip_connect",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "evolution",
+      "seed": 9,
+      "val_accuracy": 90.10399998657226,
+      "rank": 791,
+      "regret_percentage_points": 1.502666663818374,
+      "ops": [
+        "nor_conv_1x1",
+        "nor_conv_3x3",
+        "none",
+        "nor_conv_1x1",
+        "nor_conv_3x3",
+        "nor_conv_1x1"
+      ]
+    },
+    {
+      "method": "random",
+      "seed": 10,
+      "val_accuracy": 91.08266665445963,
+      "rank": 78,
+      "regret_percentage_points": 0.5239999959310069,
+      "ops": [
+        "avg_pool_3x3",
+        "nor_conv_3x3",
+        "none",
+        "skip_connect",
+        "nor_conv_3x3",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "evolution",
+      "seed": 10,
+      "val_accuracy": 91.37799998168944,
+      "rank": 15,
+      "regret_percentage_points": 0.22866666870119445,
+      "ops": [
+        "nor_conv_1x1",
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "skip_connect",
+        "nor_conv_1x1",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "random",
+      "seed": 11,
+      "val_accuracy": 90.81999997070312,
+      "rank": 266,
+      "regret_percentage_points": 0.7866666796875137,
+      "ops": [
+        "nor_conv_3x3",
+        "skip_connect",
+        "nor_conv_1x1",
+        "nor_conv_3x3",
+        "nor_conv_1x1",
+        "skip_connect"
+      ]
+    },
+    {
+      "method": "evolution",
+      "seed": 11,
+      "val_accuracy": 91.08600000366212,
+      "rank": 77,
+      "regret_percentage_points": 0.5206666467285146,
+      "ops": [
+        "nor_conv_3x3",
+        "none",
+        "nor_conv_3x3",
+        "skip_connect",
+        "none",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "random",
+      "seed": 12,
+      "val_accuracy": 91.11599998860679,
+      "rank": 64,
+      "regret_percentage_points": 0.4906666617838482,
+      "ops": [
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "skip_connect",
+        "skip_connect",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "evolution",
+      "seed": 12,
+      "val_accuracy": 91.28399999511718,
+      "rank": 35,
+      "regret_percentage_points": 0.3226666552734514,
+      "ops": [
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "skip_connect",
+        "skip_connect",
+        "nor_conv_3x3",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "random",
+      "seed": 13,
+      "val_accuracy": 90.82133333251954,
+      "rank": 263,
+      "regret_percentage_points": 0.7853333178710926,
+      "ops": [
+        "none",
+        "nor_conv_3x3",
+        "none",
+        "skip_connect",
+        "skip_connect",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "evolution",
+      "seed": 13,
+      "val_accuracy": 91.48799998657226,
+      "rank": 7,
+      "regret_percentage_points": 0.11866666381837376,
+      "ops": [
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "avg_pool_3x3",
+        "skip_connect",
+        "nor_conv_1x1",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "random",
+      "seed": 14,
+      "val_accuracy": 91.13199998209636,
+      "rank": 60,
+      "regret_percentage_points": 0.47466666829427595,
+      "ops": [
+        "skip_connect",
+        "nor_conv_1x1",
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "skip_connect",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "evolution",
+      "seed": 14,
+      "val_accuracy": 90.98600000366211,
+      "rank": 149,
+      "regret_percentage_points": 0.6206666467285231,
+      "ops": [
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "nor_conv_1x1",
+        "skip_connect",
+        "nor_conv_3x3",
+        "none"
+      ]
+    },
+    {
+      "method": "random",
+      "seed": 15,
+      "val_accuracy": 90.20266665527345,
+      "rank": 678,
+      "regret_percentage_points": 1.4039999951171893,
+      "ops": [
+        "nor_conv_3x3",
+        "nor_conv_1x1",
+        "skip_connect",
+        "nor_conv_1x1",
+        "nor_conv_3x3",
+        "none"
+      ]
+    },
+    {
+      "method": "evolution",
+      "seed": 15,
+      "val_accuracy": 91.37799998168944,
+      "rank": 15,
+      "regret_percentage_points": 0.22866666870119445,
+      "ops": [
+        "nor_conv_1x1",
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "skip_connect",
+        "nor_conv_1x1",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "random",
+      "seed": 16,
+      "val_accuracy": 91.11199999145508,
+      "rank": 69,
+      "regret_percentage_points": 0.4946666589355573,
+      "ops": [
+        "avg_pool_3x3",
+        "nor_conv_3x3",
+        "none",
+        "skip_connect",
+        "none",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "evolution",
+      "seed": 16,
+      "val_accuracy": 90.81599997070313,
+      "rank": 270,
+      "regret_percentage_points": 0.7906666796875044,
+      "ops": [
+        "nor_conv_3x3",
+        "nor_conv_1x1",
+        "nor_conv_1x1",
+        "skip_connect",
+        "nor_conv_3x3",
+        "avg_pool_3x3"
+      ]
+    },
+    {
+      "method": "random",
+      "seed": 17,
+      "val_accuracy": 90.25399998657227,
+      "rank": 639,
+      "regret_percentage_points": 1.3526666638183684,
+      "ops": [
+        "skip_connect",
+        "nor_conv_3x3",
+        "none",
+        "nor_conv_1x1",
+        "nor_conv_1x1",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "evolution",
+      "seed": 17,
+      "val_accuracy": 90.66599999145507,
+      "rank": 355,
+      "regret_percentage_points": 0.9406666589355694,
+      "ops": [
+        "avg_pool_3x3",
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "skip_connect",
+        "none",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "random",
+      "seed": 18,
+      "val_accuracy": 91.17999998657226,
+      "rank": 49,
+      "regret_percentage_points": 0.4266666638183807,
+      "ops": [
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "skip_connect",
+        "skip_connect",
+        "nor_conv_3x3",
+        "nor_conv_1x1"
+      ]
+    },
+    {
+      "method": "evolution",
+      "seed": 18,
+      "val_accuracy": 90.96133333333334,
+      "rank": 166,
+      "regret_percentage_points": 0.6453333170572932,
+      "ops": [
+        "skip_connect",
+        "nor_conv_3x3",
+        "none",
+        "skip_connect",
+        "nor_conv_3x3",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "random",
+      "seed": 19,
+      "val_accuracy": 90.42599998291016,
+      "rank": 511,
+      "regret_percentage_points": 1.1806666674804802,
+      "ops": [
+        "nor_conv_1x1",
+        "skip_connect",
+        "nor_conv_3x3",
+        "skip_connect",
+        "avg_pool_3x3",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "evolution",
+      "seed": 19,
+      "val_accuracy": 90.46599998413086,
+      "rank": 488,
+      "regret_percentage_points": 1.1406666662597758,
+      "ops": [
+        "nor_conv_3x3",
+        "skip_connect",
+        "avg_pool_3x3",
+        "nor_conv_3x3",
+        "nor_conv_1x1",
+        "skip_connect"
+      ]
+    },
+    {
+      "method": "chatgpt-feedback",
+      "seed": 0,
+      "val_accuracy": 91.60666665039064,
+      "rank": 1,
+      "regret_percentage_points": 0.0,
+      "ops": [
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "skip_connect",
+        "nor_conv_3x3",
+        "nor_conv_1x1"
+      ]
+    },
+    {
+      "method": "chatgpt-feedback",
+      "seed": 1,
+      "val_accuracy": 91.60666665039064,
+      "rank": 1,
+      "regret_percentage_points": 0.0,
+      "ops": [
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "skip_connect",
+        "nor_conv_3x3",
+        "nor_conv_1x1"
+      ]
+    },
+    {
+      "method": "chatgpt-feedback",
+      "seed": 2,
+      "val_accuracy": 91.60666665039064,
+      "rank": 1,
+      "regret_percentage_points": 0.0,
+      "ops": [
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "skip_connect",
+        "nor_conv_3x3",
+        "nor_conv_1x1"
+      ]
+    },
+    {
+      "method": "chatgpt-no-feedback",
+      "seed": 0,
+      "val_accuracy": 91.5533333235677,
+      "rank": 2,
+      "regret_percentage_points": 0.05333332682293701,
+      "ops": [
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "skip_connect",
+        "nor_conv_3x3",
+        "nor_conv_3x3"
+      ]
+    },
+    {
+      "method": "chatgpt-no-feedback",
+      "seed": 1,
+      "val_accuracy": 91.60666665039064,
+      "rank": 1,
+      "regret_percentage_points": 0.0,
+      "ops": [
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "skip_connect",
+        "nor_conv_3x3",
+        "nor_conv_1x1"
+      ]
+    },
+    {
+      "method": "chatgpt-no-feedback",
+      "seed": 2,
+      "val_accuracy": 91.60666665039064,
+      "rank": 1,
+      "regret_percentage_points": 0.0,
+      "ops": [
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "nor_conv_3x3",
+        "skip_connect",
+        "nor_conv_3x3",
+        "nor_conv_1x1"
+      ]
+    }
+  ]
+}

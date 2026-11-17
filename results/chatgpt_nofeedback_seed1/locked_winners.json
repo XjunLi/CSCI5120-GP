@@ -1,0 +1,38 @@
+[
+  {
+    "data_label": "NATS-Bench TSS",
+    "method": "chatgpt-no-feedback",
+    "seed": 1,
+    "model_label": "ChatGPT interactive assistant; runtime-inherited model; API revision and sampling parameters unavailable",
+    "dataset_for_search": "cifar10-valid",
+    "search_hp": "200",
+    "training_seed_policy": "mean of available benchmark training runs (is_random=False)",
+    "data_sha256": "580fd8f3425fed9f495640b0f12ccb7744f89dec7aff263bd75aed37ab0b8bb6",
+    "budget_attempts": 50,
+    "warm_start_attempts": 10,
+    "completed_attempts": 50,
+    "complete": true,
+    "proposal_attempts_excluding_warm": 40,
+    "unique_evaluations_including_warm": 50,
+    "validity_rate_excluding_warm": 1.0,
+    "invalid_excluding_warm": 0,
+    "duplicates_excluding_warm": 0,
+    "best_val_accuracy": 91.60666665039064,
+    "winner_ops": [
+      "nor_conv_3x3",
+      "nor_conv_3x3",
+      "nor_conv_3x3",
+      "skip_connect",
+      "nor_conv_3x3",
+      "nor_conv_1x1"
+    ],
+    "winner_architecture": "|nor_conv_3x3~0|+|nor_conv_3x3~0|nor_conv_3x3~1|+|skip_connect~0|nor_conv_3x3~1|nor_conv_1x1~2|",
+    "winner_flops": 153.27297,
+    "winner_params": 1.073466,
+    "winner_rule": "highest validation accuracy; earliest visited wins exact ties",
+    "model_seconds": null,
+    "model_timing_recorded": false,
+    "trajectory_file": "chatgpt-no-feedback_seed1.jsonl",
+    "test_evaluated": false
+  }
+]

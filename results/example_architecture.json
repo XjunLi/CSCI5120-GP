@@ -1,0 +1,54 @@
+{
+  "purpose": "Post-search explanatory lookup for the candidate in the user question; not used as a hint to proposers",
+  "source": "https://github.com/D-X-Y/NATS-Bench",
+  "source_archive_sha256": "580fd8f3425fed9f495640b0f12ccb7744f89dec7aff263bd75aed37ab0b8bb6",
+  "normalized_table_sha256": "8e22ae362896a31f12dbed71938063bb39f6fd65b465ab0bcd95c681c7e75bab",
+  "hp": "200",
+  "training_seed_policy": "Official get_more_info(..., hp=\"200\", iepoch=None, is_random=False): mean over available independent training seeds",
+  "accuracy_unit": "percent",
+  "flops_unit": "millions",
+  "params_unit": "millions",
+  "row": {
+    "architecture": "|nor_conv_3x3~0|+|nor_conv_1x1~0|skip_connect~1|+|nor_conv_3x3~0|avg_pool_3x3~1|skip_connect~2|",
+    "ops": [
+      "nor_conv_3x3",
+      "nor_conv_1x1",
+      "skip_connect",
+      "nor_conv_3x3",
+      "avg_pool_3x3",
+      "skip_connect"
+    ],
+    "benchmark_index": 10267,
+    "val_accuracy": 89.12399998779296,
+    "flops": 82.49409,
+    "params": 0.587386,
+    "validation": {
+      "cifar10-valid": 89.12399998779296,
+      "cifar100": 67.71000000000001,
+      "ImageNet16-120": 39.96666664123535
+    },
+    "test": {
+      "cifar10": 92.25999999999999,
+      "cifar100": 67.89999993591309,
+      "ImageNet16-120": 40.816666585286455
+    },
+    "costs": {
+      "cifar10-valid": {
+        "flops": 82.49409,
+        "params": 0.587386
+      },
+      "cifar10": {
+        "flops": 82.49409,
+        "params": 0.587386
+      },
+      "cifar100": {
+        "flops": 82.49994,
+        "params": 0.593236
+      },
+      "ImageNet16-120": {
+        "flops": 20.63116,
+        "params": 0.594536
+      }
+    }
+  }
+}

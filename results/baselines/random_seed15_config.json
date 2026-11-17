@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "method": "random",
+  "seed": 15,
+  "budget": 50,
+  "warm_start": 10,
+  "population": 10,
+  "tournament": 3,
+  "benchmark": "NATS-Bench TSS",
+  "dataset": "cifar10-valid",
+  "hp": "200",
+  "training_seed_policy": "mean of available benchmark training runs (is_random=False)",
+  "provenance": {
+    "benchmark": "NATS-Bench TSS",
+    "source": "https://github.com/D-X-Y/NATS-Bench",
+    "hp": "200",
+    "training_seed_policy": "mean of available benchmark training runs (is_random=False)",
+    "data_sha256": "580fd8f3425fed9f495640b0f12ccb7744f89dec7aff263bd75aed37ab0b8bb6",
+    "data_identity_kind": "source archive SHA256; no per-step extracted-file integrity scan",
+    "source_provenance": {
+      "benchmark": "NATS-Bench TSS",
+      "source": "https://github.com/D-X-Y/NATS-Bench",
+      "source_archive_name": "NATS-tss-v1_0-3ffb9-simple.tar",
+      "source_archive_sha256": "580fd8f3425fed9f495640b0f12ccb7744f89dec7aff263bd75aed37ab0b8bb6",
+      "source_archive_bytes": 1145989120,
+      "hp": "200",
+      "search_dataset": "cifar10-valid",
+      "search_metric": "get_more_info(..., hp='200', is_random=False)['valid-accuracy']",
+      "training_seed_policy": "mean of available official training runs (is_random=False)",
+      "api_version": "nats-bench 1.8",
+      "fingerprint_scope": "SHA256 of the downloaded official archive; extracted files are not rehashed per proposal"
+    },
+    "archive_name": "NATS-tss-v1_0-3ffb9-simple"
+  },
+  "budget_policy": "Every proposal costs one, including invalids and duplicates; warm starts included",
+  "uniqueness": "canonical six-operation encoding; no graph-isomorphism deduplication",
+  "random_sampling": "uniform without replacement over encodings",
+  "accuracy_unit": "percentage points",
+  "objective": "maximize validation accuracy; costs are descriptive only"
+}

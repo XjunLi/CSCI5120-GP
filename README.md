@@ -15,6 +15,33 @@ The first experiment uses **NATS-Bench TSS**, which shares the NAS-Bench-201 top
 
 This is the initial **frozen-LLM search pilot**. Harness self-evolution, multi-agent search, and online weight adaptation are follow-up experiments. Evolving a candidate architecture is not itself evidence that the search harness has improved.
 
+## Completed pilot results
+
+**46 real benchmark runs are committed:** 20 random-search runs, 20 regularized-evolution runs, and three paired runs each for ChatGPT with and without feedback. This totals 2,300 budgeted attempts, including 240 individual ChatGPT proposals after initialization. No candidate CNN was trained for this pilot.
+
+The primary comparison below uses the **same three initialization seeds (0, 1, 2)** for all four methods. Values are mean ± sample standard deviation across search runs; accuracy is in percent.
+
+| Method | Runs | Best validation | CIFAR-10 test | CIFAR-100 test | ImageNet16-120 test |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Random search | 3 | 90.987 ± 0.562 | 93.758 ± 0.635 | 71.580 ± 1.604 | 44.839 ± 0.875 |
+| Regularized evolution | 3 | 91.386 ± 0.128 | 94.123 ± 0.190 | 72.479 ± 0.750 | 45.700 ± 0.807 |
+| ChatGPT + feedback | 3 | **91.607 ± 0.000** | **94.373 ± 0.000** | 73.220 ± 0.000 | 46.711 ± 0.000 |
+| ChatGPT, no feedback | 3 | 91.589 ± 0.031 | 94.370 ± 0.006 | 73.318 ± 0.169 | 46.589 ± 0.212 |
+
+![Paired search trajectories](results/figures/paired_search_curves.png)
+
+A post-search full-space audit confirms that all three feedback runs found the unique **validation** maximum among 15,625 encodings for this fixed recipe. The no-feedback runs found ranks 2, 1, and 1. Feedback's final average gain over no feedback is only **0.0178 percentage points on validation and 0.0033 points on CIFAR-10 test**. These runs show a strong architecture prior; they do not establish a substantial feedback or self-evolution benefit. Zero SD occurs when repetitions choose the same architecture in the deterministic table.
+
+The larger 20-seed baseline cohort gives validation **90.750 ± 0.439** for random search and **91.020 ± 0.500** for evolution; CIFAR-10 test is **93.568 ± 0.356** and **93.870 ± 0.394**, respectively. This separate cohort characterizes baseline variation without presenting 20-versus-3 runs as the paired comparison.
+
+- [中文进度报告与结论](results/REPORT.md)
+- [Full machine-readable aggregates](results/aggregate_summary.json) and [CSV](results/aggregate_summary.csv)
+- [Post-search validation rank audit](results/global_rank_audit.json)
+- [All measured trajectories and run settings](results/)
+- [Interactive proposer protocol and reproducibility details](docs/CHATGPT_PROPOSER_PROTOCOL.md)
+
+All ChatGPT conditions used fresh contexts and one proposal per tool call. No-feedback models received no scores, including during warm start; the trusted evaluator still selected the best validation candidate after completion. The model service's exact API revision and sampling settings were unavailable, so the saved trajectories document this interactive pilot. The optional [Qwen2.5-0.5B CPU adapter](adapters/qwen/) passed a model-loading and output-format smoke check but was not used for the reported NAS results.
+
 ## Experiment settings
 
 | Setting | Value |
@@ -146,6 +173,25 @@ python scripts/plot_results.py \
 Pass all completed experiment directories to these commands. The figure reports mean and sample standard deviation, with the actual number of runs shown in the legend. The standard-deviation bands are not confidence intervals.
 
 CIFAR-100 and ImageNet16-120 scores describe the selected architecture trained separately on those target datasets. They do not measure zero-shot transfer of CIFAR-trained weights.
+
+## Rebuild the committed analysis
+
+These commands use the committed trajectories; neither the benchmark archive nor model access is needed to recompute aggregates and figures.
+
+```bash
+python scripts/summarize_results.py results/baselines results/chatgpt_*
+
+python scripts/plot_results.py results/baselines results/chatgpt_* \
+  --seeds 0 1 2 --from-step 10 \
+  --output results/figures/paired_search_curves.png
+```
+
+The optional full-space validation audit requires the benchmark data and must run only after searches are complete. It computes retrospective ranks, not information available to the proposer:
+
+```bash
+python scripts/audit_global_rank.py results/baselines results/chatgpt_* \
+  --backend nats --data data/NATS-tss-v1_0-3ffb9-simple
+```
 
 ## Research references
 
