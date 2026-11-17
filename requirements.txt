@@ -1,0 +1,5 @@
+# The normalized-table search and interactive harness use only the Python standard library.
+# Optional dependencies for plotting:
+numpy
+matplotlib
+# Use `pip install nats-bench` only for the original NATS archive backend.
