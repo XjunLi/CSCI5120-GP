@@ -1,0 +1,134 @@
+{
+  "backend": "table",
+  "data": "/workspace/scratch/84b9fd4aab86/nas_data/nats_tss_hp200_mean.json",
+  "methods": [
+    "harness",
+    "multiagent"
+  ],
+  "seeds": [
+    0
+  ],
+  "budget": 13,
+  "warm_start": 10,
+  "dataset": "cifar10-valid",
+  "hp": "200",
+  "proposer_backend": "hf",
+  "adapter_command": null,
+  "adapter_timeout": 180,
+  "model_path": "/workspace/scratch/84b9fd4aab86/model_runtime/Qwen2.5-0.5B-Instruct",
+  "model_label": "Qwen2.5-0.5B-Instruct",
+  "max_new_tokens": 256,
+  "temperature": 0.7,
+  "num_threads": 2,
+  "weight_backend": null,
+  "weight_model_path": null,
+  "controller_settings": {
+    "harness": {
+      "evaluation_window": 1,
+      "initial_program": {
+        "memory_size": 4
+      }
+    },
+    "multiagent": {
+      "population_size": 3,
+      "evaluations_per_agent": 1,
+      "memory_size": 4,
+      "share_top_k": 1
+    }
+  },
+  "provenance": {
+    "source": "https://github.com/D-X-Y/NATS-Bench",
+    "source_download_url": "https://drive.google.com/file/d/17_saCsj_krKjlCBLOJEpNtzPXArMCqxU/view",
+    "source_archive_name": "NATS-tss-v1_0-3ffb9-simple.tar",
+    "source_archive_bytes": 1145989120,
+    "source_archive_sha256": "580fd8f3425fed9f495640b0f12ccb7744f89dec7aff263bd75aed37ab0b8bb6",
+    "benchmark": "NATS-Bench TSS v1_0-3ffb9",
+    "api_version": "nats-bench 1.8",
+    "hp": "200",
+    "epoch_index": 199,
+    "candidate_count": 15625,
+    "search_dataset": "cifar10-valid",
+    "training_seed_policy": "Official get_more_info(..., hp=\"200\", iepoch=None, is_random=False): mean over available independent training seeds",
+    "validation_field": "cifar10-valid / x-valid / valid-accuracy",
+    "test_field": "cifar10 / ori-test / test-accuracy (trained on full 50k CIFAR-10 train images)",
+    "accuracy_unit": "percent",
+    "flops_unit": "millions of FLOPs, as returned by official get_cost_info",
+    "params_unit": "millions of parameters, as returned by official get_cost_info",
+    "cifar10_split": "Search: 25k train + 25k validation. Final test: 50k train + original 10k test.",
+    "cifar100_split": "50k train, 5k validation, 5k test; use x-valid and x-test respectively",
+    "ImageNet16-120_split": "151700 train, 3000 validation, 3000 test; use x-valid and x-test respectively",
+    "edge_order": [
+      "0->1",
+      "0->2",
+      "1->2",
+      "0->3",
+      "1->3",
+      "2->3"
+    ],
+    "export_note": "Full table is evaluator-only. Agents receive only the queried validation and cost fields. Transfer test metrics are read only after winner selection.",
+    "derived_by": "export_official.py using official APIs, no surrogate and no fabricated metrics",
+    "available_training_seed_sets": {
+      "cifar10-valid": [
+        [
+          777,
+          888
+        ],
+        [
+          777,
+          888,
+          999
+        ]
+      ],
+      "cifar10": [
+        [
+          777,
+          888
+        ],
+        [
+          777,
+          888,
+          999
+        ]
+      ],
+      "cifar100": [
+        [
+          777,
+          888
+        ],
+        [
+          777,
+          888,
+          999
+        ]
+      ],
+      "ImageNet16-120": [
+        [
+          777,
+          888
+        ],
+        [
+          777,
+          888,
+          999
+        ]
+      ]
+    },
+    "export_script_sha256": "218736dc0c93be62ea72dfa0ef562426221ef4d27e357d3384a257f675391d25",
+    "normalized_data_sha256": "8e22ae362896a31f12dbed71938063bb39f6fd65b465ab0bcd95c681c7e75bab",
+    "row_count": 15625
+  },
+  "source_manifest": {
+    "src/nas_agent_bench/__init__.py": "6715ececc5ac2cfbe41bfbc88d57ac7887a18328aa550cd35de4174ab02c6291",
+    "src/nas_agent_bench/adaptive_runner.py": "e0c0a4175a21d6b4940a0d740bf403432e1896ad4cd7d8592a7e08d8543e1451",
+    "src/nas_agent_bench/architecture.py": "796b0e8ef34151d5160c87b86a8e492643b7f3e11e8e0281ec2cc34a06834404",
+    "src/nas_agent_bench/engine.py": "0b7e325780760bf05e76a77e3e6248a2fbf71e62963f8187faf1a7df8218b29d",
+    "src/nas_agent_bench/harness_evolution.py": "581271cabe1de1b836147823ee9415173f50869a5b9ca23980798bf2fef5fc5f",
+    "src/nas_agent_bench/model_adapters.py": "e8e6307df6004d766f753d3adcbf34cccbe446f6972997d62c66105d9166c0f2",
+    "src/nas_agent_bench/multiagent_evolution.py": "123823f647cff08b95cedf6def43b4432dafe1a50730bf92ab1364242b4bbc7e",
+    "src/nas_agent_bench/oracles.py": "b49f164e091c54308b18e7e19d6eb2f9212a14bd2cf9064feb61bf98eef31919",
+    "src/nas_agent_bench/protocol.py": "fd22b5ae77222cdf4195dd9ef285c9a4251f445ba25cf6f0a1fd15631c1a40ec",
+    "src/nas_agent_bench/sessions.py": "8267d11be1f5af3545730fdadd2ba69f24d3651db4c62c2c4f1796b2c1540ae9",
+    "src/nas_agent_bench/weight_evolution.py": "1aeb366406a6dbe8259361b1e8ae10b682f6e54c3ed136b4f72ac9cdd49fc632",
+    "scripts/run_evolution.py": "a53372679edcc2453a9cd2680cb295e1ce44059dc4814b279757bf9fab313ef4"
+  }
+}

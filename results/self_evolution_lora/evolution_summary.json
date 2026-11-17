@@ -1,0 +1,320 @@
+{
+  "protocol": {
+    "data_label": "NATS-Bench TSS v1_0-3ffb9",
+    "dataset_for_search": "cifar10-valid",
+    "search_hp": "200",
+    "budget_attempts": 26,
+    "warm_start_attempts": 10,
+    "training_seed_policy": "Official get_more_info(..., hp=\"200\", iepoch=None, is_random=False): mean over available independent training seeds",
+    "data_sha256": "8e22ae362896a31f12dbed71938063bb39f6fd65b465ab0bcd95c681c7e75bab"
+  },
+  "runs": 6,
+  "groups": [
+    {
+      "method": "weight-frozen",
+      "model_label": "hf_lora-policy",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "metrics": {
+        "best_val_accuracy": {
+          "n": 3,
+          "mean": 90.98688887491862,
+          "sd": 0.5620685346442816,
+          "values": [
+            90.33799998535156,
+            91.32266665039062,
+            91.29999998901367
+          ]
+        },
+        "unique_evaluations_including_warm": {
+          "n": 3,
+          "mean": 22.333333333333332,
+          "sd": 0.5773502691896257,
+          "values": [
+            22,
+            23,
+            22
+          ]
+        },
+        "invalid_excluding_warm": {
+          "n": 3,
+          "mean": 0,
+          "sd": 0.0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "duplicates_excluding_warm": {
+          "n": 3,
+          "mean": 3.6666666666666665,
+          "sd": 0.5773502691896257,
+          "values": [
+            4,
+            3,
+            4
+          ]
+        },
+        "model_call_count": {
+          "n": 3,
+          "mean": 16,
+          "sd": 0.0,
+          "values": [
+            16,
+            16,
+            16
+          ]
+        },
+        "search_elapsed_seconds": {
+          "n": 3,
+          "mean": 31.782162008334126,
+          "sd": 1.5662858680325,
+          "values": [
+            33.5862743760008,
+            30.99026636200142,
+            30.769945287000155
+          ]
+        },
+        "adaptation_seconds": {
+          "n": 3,
+          "mean": 0.01237430166414318,
+          "sd": 0.001521013503333953,
+          "values": [
+            0.014092815999902086,
+            0.011201175995665835,
+            0.011828912996861618
+          ]
+        },
+        "ImageNet16-120_test_accuracy_hp200": {
+          "n": 3,
+          "mean": 44.83888882050691,
+          "sd": 0.8753306757790411,
+          "values": [
+            43.94999987284342,
+            45.699999972873265,
+            44.866666615804036
+          ]
+        },
+        "cifar100_test_accuracy_hp200": {
+          "n": 3,
+          "mean": 71.57999997660319,
+          "sd": 1.6044002024853667,
+          "values": [
+            69.72999997253419,
+            72.41999998779296,
+            72.58999996948242
+          ]
+        },
+        "cifar10_test_accuracy_hp200": {
+          "n": 3,
+          "mean": 93.75833333333334,
+          "sd": 0.6350262461767572,
+          "values": [
+            93.03999999999999,
+            93.99000000000001,
+            94.245
+          ]
+        }
+      },
+      "mechanism_evidence": {
+        "total_updates": {
+          "n": 3,
+          "mean": 0,
+          "sd": 0.0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "weight_delta_l2": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "method": "weight-ttt",
+      "model_label": "hf_lora-policy",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "metrics": {
+        "best_val_accuracy": {
+          "n": 3,
+          "mean": 90.98688887491862,
+          "sd": 0.5620685346442816,
+          "values": [
+            90.33799998535156,
+            91.32266665039062,
+            91.29999998901367
+          ]
+        },
+        "unique_evaluations_including_warm": {
+          "n": 3,
+          "mean": 22,
+          "sd": 1.0,
+          "values": [
+            21,
+            23,
+            22
+          ]
+        },
+        "invalid_excluding_warm": {
+          "n": 3,
+          "mean": 0,
+          "sd": 0.0,
+          "values": [
+            0,
+            0,
+            0
+          ]
+        },
+        "duplicates_excluding_warm": {
+          "n": 3,
+          "mean": 4,
+          "sd": 1.0,
+          "values": [
+            5,
+            3,
+            4
+          ]
+        },
+        "model_call_count": {
+          "n": 3,
+          "mean": 16,
+          "sd": 0.0,
+          "values": [
+            16,
+            16,
+            16
+          ]
+        },
+        "search_elapsed_seconds": {
+          "n": 3,
+          "mean": 78.275241785,
+          "sd": 1.0135687902061659,
+          "values": [
+            77.20229938299963,
+            79.21658042600029,
+            78.40684554600011
+          ]
+        },
+        "adaptation_seconds": {
+          "n": 3,
+          "mean": 36.86806171233669,
+          "sd": 0.8723970428777948,
+          "values": [
+            35.8841513670086,
+            37.54714498200701,
+            37.17288878799445
+          ]
+        },
+        "ImageNet16-120_test_accuracy_hp200": {
+          "n": 3,
+          "mean": 44.83888882050691,
+          "sd": 0.8753306757790411,
+          "values": [
+            43.94999987284342,
+            45.699999972873265,
+            44.866666615804036
+          ]
+        },
+        "cifar100_test_accuracy_hp200": {
+          "n": 3,
+          "mean": 71.57999997660319,
+          "sd": 1.6044002024853667,
+          "values": [
+            69.72999997253419,
+            72.41999998779296,
+            72.58999996948242
+          ]
+        },
+        "cifar10_test_accuracy_hp200": {
+          "n": 3,
+          "mean": 93.75833333333334,
+          "sd": 0.6350262461767572,
+          "values": [
+            93.03999999999999,
+            93.99000000000001,
+            94.245
+          ]
+        }
+      },
+      "mechanism_evidence": {
+        "total_updates": {
+          "n": 3,
+          "mean": 4,
+          "sd": 0.0,
+          "values": [
+            4,
+            4,
+            4
+          ]
+        },
+        "weight_delta_l2": {
+          "n": 3,
+          "mean": 0.11419879593215194,
+          "sd": 0.016250827788273053,
+          "values": [
+            0.13015983096975645,
+            0.09767290398033748,
+            0.1147636528463619
+          ]
+        }
+      }
+    }
+  ],
+  "paired_comparisons": [
+    {
+      "adaptive": "weight-ttt",
+      "frozen": "weight-frozen",
+      "model_label": "hf_lora-policy",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "adaptive_minus_frozen": {
+        "best_val_accuracy": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "wins": 0,
+          "ties": 3,
+          "losses": 0
+        },
+        "cifar10_test_accuracy_hp200": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "wins": 0,
+          "ties": 3,
+          "losses": 0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "protocol": {
+    "data_label": "NATS-Bench TSS v1_0-3ffb9",
+    "dataset_for_search": "cifar10-valid",
+    "search_hp": "200",
+    "budget_attempts": 13,
+    "warm_start_attempts": 10,
+    "training_seed_policy": "Official get_more_info(..., hp=\"200\", iepoch=None, is_random=False): mean over available independent training seeds",
+    "data_sha256": "8e22ae362896a31f12dbed71938063bb39f6fd65b465ab0bcd95c681c7e75bab"
+  },
+  "runs": 2,
+  "groups": [
+    {
+      "method": "harness",
+      "model_label": "Qwen2.5-0.5B-Instruct",
+      "seeds": [
+        0
+      ],
+      "metrics": {
+        "best_val_accuracy": {
+          "n": 1,
+          "mean": 90.33799998535156,
+          "sd": 0.0,
+          "values": [
+            90.33799998535156
+          ]
+        },
+        "unique_evaluations_including_warm": {
+          "n": 1,
+          "mean": 10,
+          "sd": 0.0,
+          "values": [
+            10
+          ]
+        },
+        "invalid_excluding_warm": {
+          "n": 1,
+          "mean": 3,
+          "sd": 0.0,
+          "values": [
+            3
+          ]
+        },
+        "duplicates_excluding_warm": {
+          "n": 1,
+          "mean": 0,
+          "sd": 0.0,
+          "values": [
+            0
+          ]
+        },
+        "model_call_count": {
+          "n": 1,
+          "mean": 4,
+          "sd": 0.0,
+          "values": [
+            4
+          ]
+        },
+        "search_elapsed_seconds": {
+          "n": 1,
+          "mean": 101.14895747999981,
+          "sd": 0.0,
+          "values": [
+            101.14895747999981
+          ]
+        },
+        "adaptation_seconds": {
+          "n": 1,
+          "mean": 0.0003053319924219977,
+          "sd": 0.0,
+          "values": [
+            0.0003053319924219977
+          ]
+        },
+        "ImageNet16-120_test_accuracy_hp200": {
+          "n": 1,
+          "mean": 43.94999987284342,
+          "sd": 0.0,
+          "values": [
+            43.94999987284342
+          ]
+        },
+        "cifar100_test_accuracy_hp200": {
+          "n": 1,
+          "mean": 69.72999997253419,
+          "sd": 0.0,
+          "values": [
+            69.72999997253419
+          ]
+        },
+        "cifar10_test_accuracy_hp200": {
+          "n": 1,
+          "mean": 93.03999999999999,
+          "sd": 0.0,
+          "values": [
+            93.03999999999999
+          ]
+        }
+      },
+      "mechanism_evidence": {
+        "promotions": {
+          "n": 1,
+          "mean": 0,
+          "sd": 0.0,
+          "values": [
+            0
+          ]
+        },
+        "rejections": {
+          "n": 1,
+          "mean": 1,
+          "sd": 0.0,
+          "values": [
+            1
+          ]
+        },
+        "program_versions": {
+          "n": 1,
+          "mean": 2,
+          "sd": 0.0,
+          "values": [
+            2
+          ]
+        }
+      }
+    },
+    {
+      "method": "multiagent",
+      "model_label": "Qwen2.5-0.5B-Instruct",
+      "seeds": [
+        0
+      ],
+      "metrics": {
+        "best_val_accuracy": {
+          "n": 1,
+          "mean": 90.33799998535156,
+          "sd": 0.0,
+          "values": [
+            90.33799998535156
+          ]
+        },
+        "unique_evaluations_including_warm": {
+          "n": 1,
+          "mean": 12,
+          "sd": 0.0,
+          "values": [
+            12
+          ]
+        },
+        "invalid_excluding_warm": {
+          "n": 1,
+          "mean": 1,
+          "sd": 0.0,
+          "values": [
+            1
+          ]
+        },
+        "duplicates_excluding_warm": {
+          "n": 1,
+          "mean": 0,
+          "sd": 0.0,
+          "values": [
+            0
+          ]
+        },
+        "model_call_count": {
+          "n": 1,
+          "mean": 6,
+          "sd": 0.0,
+          "values": [
+            6
+          ]
+        },
+        "search_elapsed_seconds": {
+          "n": 1,
+          "mean": 127.63020920700001,
+          "sd": 0.0,
+          "values": [
+            127.63020920700001
+          ]
+        },
+        "adaptation_seconds": {
+          "n": 1,
+          "mean": 0.0009389179940626491,
+          "sd": 0.0,
+          "values": [
+            0.0009389179940626491
+          ]
+        },
+        "ImageNet16-120_test_accuracy_hp200": {
+          "n": 1,
+          "mean": 43.94999987284342,
+          "sd": 0.0,
+          "values": [
+            43.94999987284342
+          ]
+        },
+        "cifar100_test_accuracy_hp200": {
+          "n": 1,
+          "mean": 69.72999997253419,
+          "sd": 0.0,
+          "values": [
+            69.72999997253419
+          ]
+        },
+        "cifar10_test_accuracy_hp200": {
+          "n": 1,
+          "mean": 93.03999999999999,
+          "sd": 0.0,
+          "values": [
+            93.03999999999999
+          ]
+        }
+      },
+      "mechanism_evidence": {
+        "generation": {
+          "n": 1,
+          "mean": 1,
+          "sd": 0.0,
+          "values": [
+            1
+          ]
+        },
+        "births": {
+          "n": 1,
+          "mean": 1,
+          "sd": 0.0,
+          "values": [
+            1
+          ]
+        }
+      }
+    }
+  ],
+  "paired_comparisons": []
+}

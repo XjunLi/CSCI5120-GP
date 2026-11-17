@@ -1,0 +1,33 @@
+{
+  "implementation_commit": "626becaa899aea1e0e37196c784dbd681f872d5b",
+  "cohorts": {
+    "self_evolution_cpu": {
+      "runs": 120,
+      "attempts": 6000,
+      "model_calls": 0,
+      "weight_updates": 200
+    },
+    "self_evolution_lora": {
+      "runs": 6,
+      "attempts": 156,
+      "model_calls": 96,
+      "weight_updates": 12
+    },
+    "self_evolution_llm_smoke": {
+      "runs": 2,
+      "attempts": 26,
+      "model_calls": 10,
+      "weight_updates": 0
+    }
+  },
+  "automated_tests_passed": 50,
+  "http_adapter_mock_tasks": [
+    "proposal",
+    "harness_patch",
+    "peer_critique"
+  ],
+  "source_manifests_verified": true,
+  "paired_initializations_verified": true,
+  "frozen_weights_unchanged": true,
+  "test_scoring_after_all_winners_locked": true
+}
