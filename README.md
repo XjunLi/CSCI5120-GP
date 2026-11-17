@@ -12,8 +12,37 @@ The first experiment uses **NATS-Bench TSS**, which shares the NAS-Bench-201 top
 - An interactive, one-proposal-at-a-time interface for ChatGPT and a generic JSON model-adapter interface.
 - Paired initial candidates, strict attempt budgets, duplicate/invalid accounting, complete trajectories, and delayed held-out test evaluation.
 - Protocol tests, summary tables, and publication-friendly PNG/PDF search curves.
+- Versioned harness-program evolution with validation-based promotion/rollback and a resource-niche archive.
+- Multi-agent co-evolution with peer critique, separate memories, reproduction and changing communication routes.
+- TTT-inspired online policy gradients: a small NumPy autoregressive policy and actual LoRA updates in a local causal LM.
+- Matched frozen controls for all three layers, audited model adapters and atomic checkpoint/resume.
 
-This is the initial **frozen-LLM search pilot**. Harness self-evolution, multi-agent search, and online weight adaptation are follow-up experiments. Evolving a candidate architecture is not itself evidence that the search harness has improved.
+The original **frozen-LLM search pilot** and the new **self-evolution experiments** are reported separately. Evolving a candidate architecture is not itself evidence that the search harness has improved: the new experiments record program versions, agent lineages and actual parameter changes.
+
+## Self-evolution: three implemented layers
+
+| Layer | Adaptive method | Frozen control | Object updated |
+| --- | --- | --- | --- |
+| Harness | `harness` | `harness-frozen` | Search workflow, memory policy, exploration and prompt |
+| Multi-agent | `multiagent` | `multiagent-frozen` | Agent roles/prompts, population and communication shortcuts |
+| Weights | `weight-ttt` | `weight-frozen` | Autoregressive policy parameters or real LM LoRA weights |
+
+Start with the CPU implementation:
+
+```bash
+python -m pip install -e '.[adaptation,nats]'
+python scripts/run_evolution.py \
+  --backend nats --data data/NATS-tss-v1_0-3ffb9-simple \
+  --output results/my_self_evolution \
+  --controller-config configs/evolution.json \
+  --seeds 0 1 2 --budget 50 --warm-start 10
+```
+
+This runs all six conditions. Harness and multi-agent defaults are explicit local search policies; the default weight learner is a 405-parameter autoregressive policy. Use `--proposer-backend hf` for frozen LLM harness/peer calls, or `configs/ttt_lora.json` with `--weight-model-path` for actual LM weight updates. Full commands, algorithms, schemas and checkpoint usage are in **[Self-evolving NAS agents](docs/SELF_EVOLUTION.md)**. LoRA details are in [the TTT adapter guide](adapters/ttt/README.md).
+
+The implementation follows the test-problem learning principle of [TTT-Discover](https://arxiv.org/abs/2601.16175), with validation-reward policy gradients, adaptive entropic weights, a reference-policy KL penalty and an entropy term. It is a NAS adaptation, not a reproduction of the complete TTT-Discover system. Each run resets policy/optimizer state; held-out tests never enter updates.
+
+Completed experiments and mechanism evidence are recorded in [the self-evolution progress report](docs/SELF_EVOLUTION_RESULTS.md). The earlier ChatGPT results below remain unchanged.
 
 ## Completed pilot results
 
@@ -199,3 +228,4 @@ python scripts/audit_global_rank.py results/baselines results/chatgpt_* \
 - [NAS-Bench-201](https://arxiv.org/abs/2001.00326).
 - [Regularized Evolution for Image Classifier Architecture Search](https://arxiv.org/abs/1802.01548).
 - [CoLLM-NAS](https://arxiv.org/abs/2509.26037).
+- [Learning to Discover at Test Time / TTT-Discover](https://arxiv.org/abs/2601.16175) and [official code](https://github.com/test-time-training/discover).

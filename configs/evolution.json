@@ -1,0 +1,19 @@
+{
+  "harness": {
+    "evaluation_window": 4,
+    "promotion_margin": 0.0
+  },
+  "multiagent": {
+    "population_size": 4,
+    "evaluations_per_agent": 3,
+    "memory_size": 16
+  },
+  "weight": {
+    "backend": "numpy",
+    "batch_size": 4,
+    "learning_rate": 0.03,
+    "kl_coefficient": 0.02,
+    "entropy_coefficient": 0.001,
+    "entropic_kl": 0.6931471805599453
+  }
+}

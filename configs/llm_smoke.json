@@ -1,0 +1,12 @@
+{
+  "harness": {
+    "evaluation_window": 1,
+    "initial_program": {"memory_size": 4}
+  },
+  "multiagent": {
+    "population_size": 3,
+    "evaluations_per_agent": 1,
+    "memory_size": 4,
+    "share_top_k": 1
+  }
+}

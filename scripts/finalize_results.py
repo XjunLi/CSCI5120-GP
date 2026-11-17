@@ -20,8 +20,22 @@ def main():
     for directory in a.result_dirs:
         folder = Path(directory)
         locked = json.loads((folder / "locked_winners.json").read_text())
-        if any(not row["complete"] or row["completed_attempts"] != row["budget_attempts"] for row in locked):
+        if not locked or any(not row["complete"] or row["completed_attempts"] != row["budget_attempts"] for row in locked):
             raise ValueError("Every requested search must be complete before test access")
+        identities = [(row["method"], row["seed"]) for row in locked]
+        if len(set(identities)) != len(identities):
+            raise ValueError("Locked winners contain duplicate method/seed entries")
+        config_path = folder / "config.json"
+        if config_path.exists():
+            config = json.loads(config_path.read_text())
+            if "methods" in config and "seeds" in config:
+                expected = {(method, seed) for method in config["methods"] for seed in config["seeds"]}
+            elif "method" in config and "seed" in config:
+                expected = {(config["method"], config["seed"])}
+            else:
+                expected = None
+            if expected is not None and set(identities) != expected:
+                raise ValueError("Every declared condition and seed must finish before test access")
         loaded.append((folder, locked))
     oracle = load_oracle(a.backend, a.data, a.dataset, a.hp)
     fingerprint = oracle.metadata.get("normalized_data_sha256", oracle.metadata.get("data_sha256"))

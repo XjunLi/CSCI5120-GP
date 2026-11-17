@@ -15,3 +15,5 @@ private_state.json
 *.egg-info/
 build/
 dist/
+results/**/checkpoints/
+results/**/.run.lock

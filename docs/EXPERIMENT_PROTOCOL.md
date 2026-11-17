@@ -53,4 +53,4 @@ For the paired LLM comparison, show all three individual pairs as well as the ag
 
 ## Scope
 
-This experiment implements conventional NAS baselines and frozen-LLM iterative architecture search. Changing a candidate architecture is not itself harness self-evolution. Harness self-improvement requires modifying and validating the search policy, memory handling, prompt, or executable search program. Multi-agent workflows and online weight updates remain separate follow-up experiments.
+This initial experiment covers conventional NAS baselines and frozen-LLM iterative architecture search. Changing a candidate architecture is not itself harness self-evolution. The follow-up implementation now modifies and evaluates search programs, multi-agent populations and online policy weights in separate matched experiments; see [SELF_EVOLUTION.md](SELF_EVOLUTION.md). Results from those controllers are kept separate from the frozen-LLM pilot described here.
