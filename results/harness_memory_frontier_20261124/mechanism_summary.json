@@ -1,0 +1,38 @@
+{
+  "replay_attempts": {
+    "memory_frontier": {
+      "edited_versions_used_by_evaluated_proposals": {
+        "frontier": 104,
+        "memory": 87,
+        "structure": 54
+      },
+      "edits": {
+        "frontier": 116,
+        "memory": 96,
+        "structure": 54
+      },
+      "runs": 30,
+      "runs_with_evaluated_coverage_route": 16,
+      "structure_counterfactual_candidate_changes": 16,
+      "structure_counterfactuals": 54
+    }
+  },
+  "replay_cost": {
+    "memory_frontier": {
+      "edited_versions_used_by_evaluated_proposals": {
+        "frontier": 105,
+        "memory": 87,
+        "structure": 54
+      },
+      "edits": {
+        "frontier": 112,
+        "memory": 93,
+        "structure": 54
+      },
+      "runs": 30,
+      "runs_with_evaluated_coverage_route": 16,
+      "structure_counterfactual_candidate_changes": 16,
+      "structure_counterfactuals": 54
+    }
+  }
+}

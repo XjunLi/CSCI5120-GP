@@ -4,7 +4,7 @@ __pycache__/
 .venv/
 venv/
 .cache/
-data/
+/data/
 models/
 private_sessions/
 private_state.json
@@ -17,3 +17,15 @@ build/
 dist/
 results/**/checkpoints/
 results/**/.run.lock
+*.pt
+*.pth
+*.bin
+*.zlib
+results/**/model_artifact*
+*.safetensors
+vendor/parameter_golf/data/datasets/
+vendor/parameter_golf/data/tokenizers/
+vendor/parameter_golf/data/manifest.json
+vendor/parameter_golf/data/docs_selected*
+# Exact replay trajectories are committed in deterministic ZIPs with SHA-256 indices.
+/results/**/replay_*/*_seed*.json

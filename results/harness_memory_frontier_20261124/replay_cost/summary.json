@@ -1,0 +1,492 @@
+{
+  "anytime_metric_definition": "query: mean incumbent regret after attempts warm+1..budget; cost: left-continuous regret integral from common warm-start cost to cap, divided by that interval; missing incumbents excluded and counted",
+  "experiment": {
+    "budget": 24,
+    "cost_basis": "training",
+    "cost_budget_seconds": 6.743884710500765,
+    "methods": [
+      "random",
+      "evolution",
+      "memory-frontier-frozen",
+      "memory-frontier-memory-only",
+      "memory-frontier-structure-only",
+      "memory-frontier-frontier-only",
+      "memory-frontier-no-frontier",
+      "memory-frontier-no-structure",
+      "memory-frontier-no-memory",
+      "memory-frontier-adaptive"
+    ],
+    "search_implementation_sha256": {
+      "analysis.py": "70c26992c390ca85bf9811a313c001bd644ed55e7de2ff6728020225b18b261d",
+      "harness_graph.py": "7d52471a179b6a9a4aeb3780211e903d5fd8be2ce798b1438094ca183a018269",
+      "search.py": "a38afb7958cde9162ccaf17c3e94516af2d566a682f8c2a1ef744a60e158a71b",
+      "table.py": "46962ec8156b02ca10481f7c05f6cb3eb3609757fc427259a9c3a5c8bbfe757d"
+    },
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "table_id": "44d569567c150a918d69044bc60936081260a0bde63040fe5caa6070c0f041d2",
+    "warm_start": 4,
+    "weight_model_identity": null,
+    "weight_model_path": null
+  },
+  "factorial_effects": {
+    "conditions": {
+      "000": "memory-frontier-frozen",
+      "001": "memory-frontier-frontier-only",
+      "010": "memory-frontier-structure-only",
+      "011": "memory-frontier-no-memory",
+      "100": "memory-frontier-memory-only",
+      "101": "memory-frontier-no-structure",
+      "110": "memory-frontier-no-frontier",
+      "111": "memory-frontier-adaptive"
+    },
+    "factor_order": [
+      "memory",
+      "structure",
+      "frontier"
+    ],
+    "interpretation": "main effects average over other switches; interactions are averaged differences in differences; negative quality effects are favorable",
+    "metrics": {
+      "anytime_regret": {
+        "complete_seed_blocks": 30,
+        "effects": [
+          {
+            "factors": [
+              "memory"
+            ],
+            "mean_effect": 0.0006113721823628254,
+            "order": 1,
+            "paired_bootstrap_95ci": [
+              -0.008930105560036039,
+              0.009998432611557336
+            ]
+          },
+          {
+            "factors": [
+              "structure"
+            ],
+            "mean_effect": 0.0023061733898059166,
+            "order": 1,
+            "paired_bootstrap_95ci": [
+              -0.01840679949801701,
+              0.026764605303333022
+            ]
+          },
+          {
+            "factors": [
+              "frontier"
+            ],
+            "mean_effect": 0.003704350557064941,
+            "order": 1,
+            "paired_bootstrap_95ci": [
+              -0.0034375126207057114,
+              0.012095609363926398
+            ]
+          },
+          {
+            "factors": [
+              "memory",
+              "structure"
+            ],
+            "mean_effect": -0.006364921281625857,
+            "order": 2,
+            "paired_bootstrap_95ci": [
+              -0.023486042138508835,
+              0.010287583933134599
+            ]
+          },
+          {
+            "factors": [
+              "memory",
+              "frontier"
+            ],
+            "mean_effect": 0.014029442764384698,
+            "order": 2,
+            "paired_bootstrap_95ci": [
+              0.001057977946394649,
+              0.029499139648532433
+            ]
+          },
+          {
+            "factors": [
+              "structure",
+              "frontier"
+            ],
+            "mean_effect": -0.009247807000379159,
+            "order": 2,
+            "paired_bootstrap_95ci": [
+              -0.025616695177510914,
+              0.004176842974515778
+            ]
+          },
+          {
+            "factors": [
+              "memory",
+              "structure",
+              "frontier"
+            ],
+            "mean_effect": -0.01909768526331949,
+            "order": 3,
+            "paired_bootstrap_95ci": [
+              -0.05003398264789725,
+              0.005388831986910144
+            ]
+          }
+        ],
+        "incomplete_seed_blocks": 0
+      },
+      "terminal_bpb": {
+        "complete_seed_blocks": 30,
+        "effects": [
+          {
+            "factors": [
+              "memory"
+            ],
+            "mean_effect": 0.0035311872148303817,
+            "order": 1,
+            "paired_bootstrap_95ci": [
+              0.0,
+              0.010593561644491146
+            ]
+          },
+          {
+            "factors": [
+              "structure"
+            ],
+            "mean_effect": 0.0035311872148303817,
+            "order": 1,
+            "paired_bootstrap_95ci": [
+              0.0,
+              0.010593561644491146
+            ]
+          },
+          {
+            "factors": [
+              "frontier"
+            ],
+            "mean_effect": 0.0,
+            "order": 1,
+            "paired_bootstrap_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "factors": [
+              "memory",
+              "structure"
+            ],
+            "mean_effect": 0.007062374429660763,
+            "order": 2,
+            "paired_bootstrap_95ci": [
+              0.0,
+              0.02118712328898229
+            ]
+          },
+          {
+            "factors": [
+              "memory",
+              "frontier"
+            ],
+            "mean_effect": 0.0,
+            "order": 2,
+            "paired_bootstrap_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "factors": [
+              "structure",
+              "frontier"
+            ],
+            "mean_effect": 0.0,
+            "order": 2,
+            "paired_bootstrap_95ci": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "factors": [
+              "memory",
+              "structure",
+              "frontier"
+            ],
+            "mean_effect": 0.0,
+            "order": 3,
+            "paired_bootstrap_95ci": [
+              0.0,
+              0.0
+            ]
+          }
+        ],
+        "incomplete_seed_blocks": 0
+      }
+    },
+    "uncertainty_unit": "paired search-seed block on this fixed measured table"
+  },
+  "interpretation": "negative adaptive-minus-frozen difference is better; CPU smoke is not a GPU or LLM result",
+  "methods": {
+    "evolution": {
+      "anytime_feasible_runs": 30,
+      "feasible_winner_runs": 30,
+      "mean_anytime_regret": 0.21483441970771658,
+      "mean_attempts": 11.6,
+      "mean_best_bpb": 3.6178518974999876,
+      "mean_charge_seconds": 6.459364066600438,
+      "mean_gap_to_table_optimum": 0.06456655230363983,
+      "optimum_hit_runs": 23,
+      "runs": 30,
+      "std_best_bpb": 0.1264148917665927
+    },
+    "memory-frontier-adaptive": {
+      "anytime_feasible_runs": 30,
+      "feasible_winner_runs": 30,
+      "mean_anytime_regret": 0.10566468959448463,
+      "mean_attempts": 11.766666666666667,
+      "mean_best_bpb": 3.5603477196260087,
+      "mean_charge_seconds": 6.457681466733842,
+      "mean_gap_to_table_optimum": 0.007062374429660956,
+      "optimum_hit_runs": 29,
+      "runs": 30,
+      "std_best_bpb": 0.038682217846728824
+    },
+    "memory-frontier-frontier-only": {
+      "anytime_feasible_runs": 30,
+      "feasible_winner_runs": 30,
+      "mean_anytime_regret": 0.10035632614031313,
+      "mean_attempts": 11.566666666666666,
+      "mean_best_bpb": 3.5532853451963478,
+      "mean_charge_seconds": 6.42564033753387,
+      "mean_gap_to_table_optimum": 0.0,
+      "optimum_hit_runs": 30,
+      "runs": 30,
+      "std_best_bpb": 0.0
+    },
+    "memory-frontier-frozen": {
+      "anytime_feasible_runs": 30,
+      "feasible_winner_runs": 30,
+      "mean_anytime_regret": 0.10381721478108083,
+      "mean_attempts": 11.6,
+      "mean_best_bpb": 3.5532853451963478,
+      "mean_charge_seconds": 6.45533561440055,
+      "mean_gap_to_table_optimum": 0.0,
+      "optimum_hit_runs": 30,
+      "runs": 30,
+      "std_best_bpb": 0.0
+    },
+    "memory-frontier-memory-only": {
+      "anytime_feasible_runs": 30,
+      "feasible_winner_runs": 30,
+      "mean_anytime_regret": 0.09582190490623436,
+      "mean_attempts": 11.666666666666666,
+      "mean_best_bpb": 3.5532853451963478,
+      "mean_charge_seconds": 6.47964499690047,
+      "mean_gap_to_table_optimum": 0.0,
+      "optimum_hit_runs": 30,
+      "runs": 30,
+      "std_best_bpb": 0.0
+    },
+    "memory-frontier-no-frontier": {
+      "anytime_feasible_runs": 30,
+      "feasible_winner_runs": 30,
+      "mean_anytime_regret": 0.1043439424712468,
+      "mean_attempts": 11.8,
+      "mean_best_bpb": 3.5603477196260087,
+      "mean_charge_seconds": 6.475165015600487,
+      "mean_gap_to_table_optimum": 0.007062374429660956,
+      "optimum_hit_runs": 29,
+      "runs": 30,
+      "std_best_bpb": 0.038682217846728824
+    },
+    "memory-frontier-no-memory": {
+      "anytime_feasible_runs": 30,
+      "feasible_winner_runs": 30,
+      "mean_anytime_regret": 0.10599547798657227,
+      "mean_attempts": 11.9,
+      "mean_best_bpb": 3.5532853451963478,
+      "mean_charge_seconds": 6.4591974978004,
+      "mean_gap_to_table_optimum": 0.0,
+      "optimum_hit_runs": 30,
+      "runs": 30,
+      "std_best_bpb": 0.0
+    },
+    "memory-frontier-no-structure": {
+      "anytime_feasible_runs": 30,
+      "feasible_winner_runs": 30,
+      "mean_anytime_regret": 0.1159393016615111,
+      "mean_attempts": 11.666666666666666,
+      "mean_best_bpb": 3.5532853451963478,
+      "mean_charge_seconds": 6.5051739678671385,
+      "mean_gap_to_table_optimum": 0.0,
+      "optimum_hit_runs": 30,
+      "runs": 30,
+      "std_best_bpb": 0.0
+    },
+    "memory-frontier-structure-only": {
+      "anytime_feasible_runs": 30,
+      "feasible_winner_runs": 30,
+      "mean_anytime_regret": 0.10915533099605938,
+      "mean_attempts": 12,
+      "mean_best_bpb": 3.5532853451963478,
+      "mean_charge_seconds": 6.494440658633759,
+      "mean_gap_to_table_optimum": 0.0,
+      "optimum_hit_runs": 30,
+      "runs": 30,
+      "std_best_bpb": 0.0
+    },
+    "random": {
+      "anytime_feasible_runs": 30,
+      "feasible_winner_runs": 30,
+      "mean_anytime_regret": 0.2847273831974886,
+      "mean_attempts": 11.6,
+      "mean_best_bpb": 3.7691031716889167,
+      "mean_charge_seconds": 6.457538564600691,
+      "mean_gap_to_table_optimum": 0.21581782649256898,
+      "optimum_hit_runs": 11,
+      "runs": 30,
+      "std_best_bpb": 0.19455927648243032
+    }
+  },
+  "paired_comparisons": [
+    {
+      "adaptive": "memory-frontier-adaptive",
+      "adaptive_only_feasible_pairs": 0,
+      "both_feasible_pairs": 30,
+      "difference_condition": "both methods found a feasible winner; also inspect failure counts",
+      "frozen": "memory-frontier-frozen",
+      "frozen_only_feasible_pairs": 0,
+      "losses": 1,
+      "mean_adaptive_minus_frozen_bpb": 0.007062374429660763,
+      "neither_feasible_pairs": 0,
+      "paired_anytime_regret": {
+        "both_feasible_pairs": 30,
+        "mean_difference": 0.0018474748134038104,
+        "paired_bootstrap_95ci": [
+          -0.022802656596038327,
+          0.03126816560548479
+        ]
+      },
+      "paired_bootstrap_95ci": [
+        0.0,
+        0.02118712328898229
+      ],
+      "pairs": 30,
+      "ties": 29,
+      "wins": 0
+    },
+    {
+      "adaptive": "memory-frontier-adaptive",
+      "adaptive_only_feasible_pairs": 0,
+      "both_feasible_pairs": 30,
+      "difference_condition": "both methods found a feasible winner; also inspect failure counts",
+      "frozen": "memory-frontier-no-memory",
+      "frozen_only_feasible_pairs": 0,
+      "losses": 1,
+      "mean_adaptive_minus_frozen_bpb": 0.007062374429660763,
+      "neither_feasible_pairs": 0,
+      "paired_anytime_regret": {
+        "both_feasible_pairs": 30,
+        "mean_difference": -0.00033078839208762776,
+        "paired_bootstrap_95ci": [
+          -0.011670952822881588,
+          0.012100500973556314
+        ]
+      },
+      "paired_bootstrap_95ci": [
+        0.0,
+        0.02118712328898229
+      ],
+      "pairs": 30,
+      "ties": 29,
+      "wins": 0
+    },
+    {
+      "adaptive": "memory-frontier-adaptive",
+      "adaptive_only_feasible_pairs": 0,
+      "both_feasible_pairs": 30,
+      "difference_condition": "both methods found a feasible winner; also inspect failure counts",
+      "frozen": "memory-frontier-no-structure",
+      "frozen_only_feasible_pairs": 0,
+      "losses": 1,
+      "mean_adaptive_minus_frozen_bpb": 0.007062374429660763,
+      "neither_feasible_pairs": 0,
+      "paired_anytime_regret": {
+        "both_feasible_pairs": 30,
+        "mean_difference": -0.010274612067026467,
+        "paired_bootstrap_95ci": [
+          -0.04516247652874141,
+          0.022215548225586093
+        ]
+      },
+      "paired_bootstrap_95ci": [
+        0.0,
+        0.02118712328898229
+      ],
+      "pairs": 30,
+      "ties": 29,
+      "wins": 0
+    },
+    {
+      "adaptive": "memory-frontier-adaptive",
+      "adaptive_only_feasible_pairs": 0,
+      "both_feasible_pairs": 30,
+      "difference_condition": "both methods found a feasible winner; also inspect failure counts",
+      "frozen": "memory-frontier-no-frontier",
+      "frozen_only_feasible_pairs": 0,
+      "losses": 0,
+      "mean_adaptive_minus_frozen_bpb": 0.0,
+      "neither_feasible_pairs": 0,
+      "paired_anytime_regret": {
+        "both_feasible_pairs": 30,
+        "mean_difference": 0.0013207471232378368,
+        "paired_bootstrap_95ci": [
+          0.0,
+          0.003962241369713511
+        ]
+      },
+      "paired_bootstrap_95ci": [
+        0.0,
+        0.0
+      ],
+      "pairs": 30,
+      "ties": 30,
+      "wins": 0
+    }
+  ],
+  "runs": 300,
+  "table_id": "44d569567c150a918d69044bc60936081260a0bde63040fe5caa6070c0f041d2",
+  "table_optimum_bpb": 3.5532853451963478,
+  "uncertainty_unit": "paired search seed, conditional on this fixed measured table"
+}

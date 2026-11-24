@@ -1,0 +1,1038 @@
+{
+  "backend": "cpu_tiny_lm",
+  "budget_tolerance_seconds": 0.0,
+  "complete": true,
+  "cost_definition": "sum of measured training seconds across the complete training-seed cohort",
+  "device_class": "CPU",
+  "evaluation_fingerprint": "dea6f79fc90465826e363dfbd6fee9225491e4f1999661b9195501805e5ed29b",
+  "execution_fingerprint": "a4929b37f5267ba6b0cf452658244b91ea66b091e9a5023c214f8398d2fb7668",
+  "hardware_fingerprint": "3f8289fbb6722a7b23293fb3a0e42ba0d6f0827ad17975babf96e58329268cd9",
+  "manifest_id": "5027658e68514cfbc46cb407d0725526ba0036e6cebf44cb1ac73ac22dffab7e",
+  "max_steps": 40,
+  "offline_end_to_end_seconds": 18.513350860000628,
+  "offline_training_seconds": 13.48776942100153,
+  "profile": "cpu_smoke",
+  "raw_run_count": 72,
+  "regime": "smoke",
+  "rows": [
+    {
+      "artifact_bytes_max": 73396,
+      "candidate_id": "cpu-07eebe56f9a4",
+      "charge_seconds": 0.5458398309999666,
+      "config": {
+        "base_lr": 0.003,
+        "eval_seq_len": 64,
+        "lr_scale": 1.3,
+        "mlp_mult": 2,
+        "model_dim": 32,
+        "num_heads": 4,
+        "num_kv_heads": 4,
+        "num_layers": 2,
+        "tied_embeddings": false,
+        "train_batch_tokens": 256,
+        "train_seq_len": 64,
+        "vocab_size": 256,
+        "warmdown_fraction": 0.3
+      },
+      "end_to_end_seconds": 0.7000665019997996,
+      "feasible": true,
+      "metric": "mean_quantized_roundtrip_bpb",
+      "per_seed_quantized_bpb": [
+        4.076414317546499,
+        4.052196963138905,
+        4.093046352568839
+      ],
+      "source_record_hashes": [
+        "b4f5e07c8404d2893b76f5aab8074da16861560b2f92342efb2c15dd97320759",
+        "75f47d6bb9d4fc0de8bf53290dca9e1dd6fd87bcc9c515005404998595afda34",
+        "5f91899f3fc8859963f7879444ddcc96cd954dbe2b32c0c34c98a375c3a934f5"
+      ],
+      "status": "completed",
+      "std_bpb": 0.020541735809021376,
+      "train_seconds": 0.5458398309999666,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "val_bpb": 4.073885877751414
+    },
+    {
+      "artifact_bytes_max": 64557,
+      "candidate_id": "cpu-093722415568",
+      "charge_seconds": 0.33606941199991525,
+      "config": {
+        "base_lr": 0.003,
+        "eval_seq_len": 64,
+        "lr_scale": 0.7,
+        "mlp_mult": 2,
+        "model_dim": 32,
+        "num_heads": 4,
+        "num_kv_heads": 4,
+        "num_layers": 1,
+        "tied_embeddings": false,
+        "train_batch_tokens": 256,
+        "train_seq_len": 64,
+        "vocab_size": 256,
+        "warmdown_fraction": 0.3
+      },
+      "end_to_end_seconds": 0.4277490890001445,
+      "feasible": true,
+      "metric": "mean_quantized_roundtrip_bpb",
+      "per_seed_quantized_bpb": [
+        4.626832823044358,
+        4.595082523233472,
+        4.644394505021163
+      ],
+      "source_record_hashes": [
+        "a96412f25a0d406a96c7f3ff5f8e2e23245400c208f6deeb459649ec0cdb9d1b",
+        "84486bed6c083709fa43a7c0200ac445635ec654fd29cc00ae79def3db9b1e8a",
+        "be9be8b61adf40ed46fc96e8a928f0bbbcd1c9e36e88f3b77192a74fc7cc628c"
+      ],
+      "status": "completed",
+      "std_bpb": 0.02499388511804804,
+      "train_seconds": 0.33606941199991525,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "val_bpb": 4.622103283766331
+    },
+    {
+      "artifact_bytes_max": 64522,
+      "candidate_id": "cpu-1b245bb50d0c",
+      "charge_seconds": 0.35380228300005,
+      "config": {
+        "base_lr": 0.003,
+        "eval_seq_len": 64,
+        "lr_scale": 1.3,
+        "mlp_mult": 2,
+        "model_dim": 32,
+        "num_heads": 4,
+        "num_kv_heads": 4,
+        "num_layers": 1,
+        "tied_embeddings": false,
+        "train_batch_tokens": 256,
+        "train_seq_len": 64,
+        "vocab_size": 256,
+        "warmdown_fraction": 0.3
+      },
+      "end_to_end_seconds": 0.4529572480000752,
+      "feasible": true,
+      "metric": "mean_quantized_roundtrip_bpb",
+      "per_seed_quantized_bpb": [
+        3.985912125852765,
+        3.96562146529027,
+        4.0800042202233096
+      ],
+      "source_record_hashes": [
+        "dbf473a45bfb69d98e1e9cea99940b4c1cdcd17f2a2b71891e42e0d95583f242",
+        "02eb18028b6668f4774865a693d6f0e92790b9e2b674dbd70c358fa00c0e8113",
+        "f28b952ad35b9d07b57b478c25448127bd3bb4a4f05246b38d8b5d87f450d76b"
+      ],
+      "status": "completed",
+      "std_bpb": 0.06103065862767889,
+      "train_seconds": 0.35380228300005,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "val_bpb": 4.010512603788781
+    },
+    {
+      "artifact_bytes_max": 71670,
+      "candidate_id": "cpu-2258ced146a5",
+      "charge_seconds": 0.35027662800030157,
+      "config": {
+        "base_lr": 0.003,
+        "eval_seq_len": 64,
+        "lr_scale": 0.7,
+        "mlp_mult": 2,
+        "model_dim": 48,
+        "num_heads": 4,
+        "num_kv_heads": 4,
+        "num_layers": 1,
+        "tied_embeddings": true,
+        "train_batch_tokens": 256,
+        "train_seq_len": 64,
+        "vocab_size": 256,
+        "warmdown_fraction": 0.3
+      },
+      "end_to_end_seconds": 0.46467534700013857,
+      "feasible": true,
+      "metric": "mean_quantized_roundtrip_bpb",
+      "per_seed_quantized_bpb": [
+        4.508337317116786,
+        4.508715882519985,
+        4.513577670606776
+      ],
+      "source_record_hashes": [
+        "cb0f8f689c523226296caac6fa09dfb4c18ec315cae414ed52b36b07654c552b",
+        "3fb96832800b52567f92a63b8b3ca08e59398197e02cb711f8ec65f8261b2039",
+        "7e24f3231ce96d27f6700e229f8ea5eeb1aa8e30f1b9e8696d592dbe46b516ce"
+      ],
+      "status": "completed",
+      "std_bpb": 0.0029223734607739175,
+      "train_seconds": 0.35027662800030157,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "val_bpb": 4.510210290081182
+    },
+    {
+      "artifact_bytes_max": 66446,
+      "candidate_id": "cpu-27cacd9fecc6",
+      "charge_seconds": 0.6641752279999764,
+      "config": {
+        "base_lr": 0.003,
+        "eval_seq_len": 64,
+        "lr_scale": 1.3,
+        "mlp_mult": 2,
+        "model_dim": 32,
+        "num_heads": 4,
+        "num_kv_heads": 4,
+        "num_layers": 2,
+        "tied_embeddings": true,
+        "train_batch_tokens": 256,
+        "train_seq_len": 64,
+        "vocab_size": 256,
+        "warmdown_fraction": 0.3
+      },
+      "end_to_end_seconds": 0.8136147479999636,
+      "feasible": true,
+      "metric": "mean_quantized_roundtrip_bpb",
+      "per_seed_quantized_bpb": [
+        4.498530641734188,
+        4.477720347876586,
+        4.473482604103226
+      ],
+      "source_record_hashes": [
+        "1b611a1629bba2b577f2f5b986fbe507c1b169e678acdde0fc275fca0f48a383",
+        "053e2051446f25eb6480d4ab24a8cf722695282c656a10edd9d4709958463950",
+        "ef69413d9f10dfd01a6e07a83c3f2be5230a39b83be945e480948aee50431522"
+      ],
+      "status": "completed",
+      "std_bpb": 0.013406658742894104,
+      "train_seconds": 0.6641752279999764,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "val_bpb": 4.483244531238
+    },
+    {
+      "artifact_bytes_max": 74947,
+      "candidate_id": "cpu-29c114dddffc",
+      "charge_seconds": 0.7058468680004353,
+      "config": {
+        "base_lr": 0.003,
+        "eval_seq_len": 64,
+        "lr_scale": 0.7,
+        "mlp_mult": 2,
+        "model_dim": 32,
+        "num_heads": 4,
+        "num_kv_heads": 4,
+        "num_layers": 3,
+        "tied_embeddings": true,
+        "train_batch_tokens": 256,
+        "train_seq_len": 64,
+        "vocab_size": 256,
+        "warmdown_fraction": 0.3
+      },
+      "end_to_end_seconds": 0.892629812000223,
+      "feasible": true,
+      "metric": "mean_quantized_roundtrip_bpb",
+      "per_seed_quantized_bpb": [
+        4.702472856685632,
+        4.688436166219413,
+        4.721122613226995
+      ],
+      "source_record_hashes": [
+        "671e20eb5171cfdd8d289cbfb0151e7b18b2b940ad84bb4aa25419af459145f2",
+        "19b1130ad4e66016c066281c8fc561cf4a8e7da5442b3fc405bfd068ca77cbad",
+        "6821078ae04e8a261a1fd333d062b9e7bd13d58ecd0c7135cabee8479d57a315"
+      ],
+      "status": "completed",
+      "std_bpb": 0.016397387577883785,
+      "train_seconds": 0.7058468680004353,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "val_bpb": 4.704010545377346
+    },
+    {
+      "artifact_bytes_max": 108587,
+      "candidate_id": "cpu-3f3e8204695d",
+      "charge_seconds": 0.7716205850001643,
+      "config": {
+        "base_lr": 0.003,
+        "eval_seq_len": 64,
+        "lr_scale": 1.3,
+        "mlp_mult": 2,
+        "model_dim": 48,
+        "num_heads": 4,
+        "num_kv_heads": 4,
+        "num_layers": 3,
+        "tied_embeddings": true,
+        "train_batch_tokens": 256,
+        "train_seq_len": 64,
+        "vocab_size": 256,
+        "warmdown_fraction": 0.3
+      },
+      "end_to_end_seconds": 0.9886041680001654,
+      "feasible": true,
+      "metric": "mean_quantized_roundtrip_bpb",
+      "per_seed_quantized_bpb": [
+        4.461654753509188,
+        4.457675194303123,
+        4.447438709707067
+      ],
+      "source_record_hashes": [
+        "6998c24252869111544884f5c2c66ed6e592c7909d7189ecd1e5aa9f0a4daff7",
+        "81c90f7e0e7b1a9e7dd23a3ada54c35b549e2777cd213fd9f88ff6c66a04767e",
+        "a59330d837d07b1d3d17f239e1421c91bd88ea74528c325a3da4c6255d631821"
+      ],
+      "status": "completed",
+      "std_bpb": 0.007333921299273947,
+      "train_seconds": 0.7716205850001643,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "val_bpb": 4.455589552506459
+    },
+    {
+      "artifact_bytes_max": 107917,
+      "candidate_id": "cpu-3fd7b2033bb6",
+      "charge_seconds": 0.7694919920002121,
+      "config": {
+        "base_lr": 0.003,
+        "eval_seq_len": 64,
+        "lr_scale": 0.7,
+        "mlp_mult": 2,
+        "model_dim": 48,
+        "num_heads": 4,
+        "num_kv_heads": 4,
+        "num_layers": 3,
+        "tied_embeddings": true,
+        "train_batch_tokens": 256,
+        "train_seq_len": 64,
+        "vocab_size": 256,
+        "warmdown_fraction": 0.3
+      },
+      "end_to_end_seconds": 0.9842995220001285,
+      "feasible": true,
+      "metric": "mean_quantized_roundtrip_bpb",
+      "per_seed_quantized_bpb": [
+        4.521307181650454,
+        4.5187172492830605,
+        4.5334286101393655
+      ],
+      "source_record_hashes": [
+        "ba325d7571ea346ca5cb15a16bbbb1e57a858029658d70c214e700b641183212",
+        "c2ff00e42ea8edb2c60ca9ce43c7d165b33162d8af3cb770414404c71b6979e0",
+        "92f7b3bc6e5331da699d1b2539dd6af9f26a193dcf7f6b27d22c3f1c0b8f4deb"
+      ],
+      "status": "completed",
+      "std_bpb": 0.007853459073596067,
+      "train_seconds": 0.7694919920002121,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "val_bpb": 4.524484347024293
+    },
+    {
+      "artifact_bytes_max": 57485,
+      "candidate_id": "cpu-4c10d5796924",
+      "charge_seconds": 0.2999458129997947,
+      "config": {
+        "base_lr": 0.003,
+        "eval_seq_len": 64,
+        "lr_scale": 1.3,
+        "mlp_mult": 2,
+        "model_dim": 32,
+        "num_heads": 4,
+        "num_kv_heads": 4,
+        "num_layers": 1,
+        "tied_embeddings": true,
+        "train_batch_tokens": 256,
+        "train_seq_len": 64,
+        "vocab_size": 256,
+        "warmdown_fraction": 0.3
+      },
+      "end_to_end_seconds": 0.39381702300011057,
+      "feasible": true,
+      "metric": "mean_quantized_roundtrip_bpb",
+      "per_seed_quantized_bpb": [
+        4.480108344533066,
+        4.429456428363253,
+        4.4830972906898605
+      ],
+      "source_record_hashes": [
+        "5056842459da949c9c42a7352d5306ed1e6b067bb14cc72f3fc59a38c7756b78",
+        "359a6d47d48ed4c19324918244b9f4a684e77055fb565f4f47ec90be15459a3a",
+        "69c5ec0fe80b5b8c579cd138e865914c77d724a96116928680dc78ad9ed531cb"
+      ],
+      "status": "completed",
+      "std_bpb": 0.03014380124764163,
+      "train_seconds": 0.2999458129997947,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "val_bpb": 4.46422068786206
+    },
+    {
+      "artifact_bytes_max": 75233,
+      "candidate_id": "cpu-526f9ccfef90",
+      "charge_seconds": 0.6861852009999438,
+      "config": {
+        "base_lr": 0.003,
+        "eval_seq_len": 64,
+        "lr_scale": 1.3,
+        "mlp_mult": 2,
+        "model_dim": 32,
+        "num_heads": 4,
+        "num_kv_heads": 4,
+        "num_layers": 3,
+        "tied_embeddings": true,
+        "train_batch_tokens": 256,
+        "train_seq_len": 64,
+        "vocab_size": 256,
+        "warmdown_fraction": 0.3
+      },
+      "end_to_end_seconds": 0.8807940750000398,
+      "feasible": true,
+      "metric": "mean_quantized_roundtrip_bpb",
+      "per_seed_quantized_bpb": [
+        4.486500757153435,
+        4.488254243123733,
+        4.500387773575505
+      ],
+      "source_record_hashes": [
+        "782e55b690cfa96e095b86a40a458ba7359c79b2fcd18b7d1f9a7e1911c99b62",
+        "e7c453910cac082faf217ddd47b8a41ffc47d87c95627ca9dd0afc0dc5a0105e",
+        "b2fe752902bd35091a8b8410a0784f40f5b1861e2a19c84b8a3705bb2f3bfb54"
+      ],
+      "status": "completed",
+      "std_bpb": 0.007562478643263851,
+      "train_seconds": 0.6861852009999438,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "val_bpb": 4.491714257950891
+    },
+    {
+      "artifact_bytes_max": 89543,
+      "candidate_id": "cpu-529881c91612",
+      "charge_seconds": 0.5592682200001491,
+      "config": {
+        "base_lr": 0.003,
+        "eval_seq_len": 64,
+        "lr_scale": 0.7,
+        "mlp_mult": 2,
+        "model_dim": 48,
+        "num_heads": 4,
+        "num_kv_heads": 4,
+        "num_layers": 2,
+        "tied_embeddings": true,
+        "train_batch_tokens": 256,
+        "train_seq_len": 64,
+        "vocab_size": 256,
+        "warmdown_fraction": 0.3
+      },
+      "end_to_end_seconds": 0.7163149949997205,
+      "feasible": true,
+      "metric": "mean_quantized_roundtrip_bpb",
+      "per_seed_quantized_bpb": [
+        4.510290387198484,
+        4.451090006680385,
+        4.51972567131132
+      ],
+      "source_record_hashes": [
+        "8641840e48f71fbe3025884a06277296b2e31c85bedd0b37f91a98157b6f0f8a",
+        "2ef99cbe91ad6e1f68aeb5af86b0743331b1d56a4d6b14ae7d3ce4c044848deb",
+        "84aa619fe2e8635042514a3fd52d35dac88e98c7e4943d1d8aaf05a8c315f697"
+      ],
+      "status": "completed",
+      "std_bpb": 0.0372034140438478,
+      "train_seconds": 0.5592682200001491,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "val_bpb": 4.493702021730063
+    },
+    {
+      "artifact_bytes_max": 82303,
+      "candidate_id": "cpu-59cc159f14c4",
+      "charge_seconds": 0.7761702100001457,
+      "config": {
+        "base_lr": 0.003,
+        "eval_seq_len": 64,
+        "lr_scale": 1.3,
+        "mlp_mult": 2,
+        "model_dim": 32,
+        "num_heads": 4,
+        "num_kv_heads": 4,
+        "num_layers": 3,
+        "tied_embeddings": false,
+        "train_batch_tokens": 256,
+        "train_seq_len": 64,
+        "vocab_size": 256,
+        "warmdown_fraction": 0.3
+      },
+      "end_to_end_seconds": 0.9692474050002602,
+      "feasible": true,
+      "metric": "mean_quantized_roundtrip_bpb",
+      "per_seed_quantized_bpb": [
+        4.173233853188427,
+        4.140703524309628,
+        4.157883833003218
+      ],
+      "source_record_hashes": [
+        "db83b50f5bddc0deef43eb74a81b6791722d346a4307ddf50644f4df3066d441",
+        "f2ecde9c676f8bdc9ec4b100fe7ecd058988abb0b86ac911d7c2d2eab5ae41d9",
+        "e9e5756a6fd6d4c62b5ddc36d32ab241b2029e7287270a77c77e053d0380839d"
+      ],
+      "status": "completed",
+      "std_bpb": 0.016273743799221585,
+      "train_seconds": 0.7761702100001457,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "val_bpb": 4.157273736833758
+    },
+    {
+      "artifact_bytes_max": 71852,
+      "candidate_id": "cpu-5a090eaf8ef6",
+      "charge_seconds": 0.3341841619999286,
+      "config": {
+        "base_lr": 0.003,
+        "eval_seq_len": 64,
+        "lr_scale": 1.3,
+        "mlp_mult": 2,
+        "model_dim": 48,
+        "num_heads": 4,
+        "num_kv_heads": 4,
+        "num_layers": 1,
+        "tied_embeddings": true,
+        "train_batch_tokens": 256,
+        "train_seq_len": 64,
+        "vocab_size": 256,
+        "warmdown_fraction": 0.3
+      },
+      "end_to_end_seconds": 0.44091256899969267,
+      "feasible": true,
+      "metric": "mean_quantized_roundtrip_bpb",
+      "per_seed_quantized_bpb": [
+        4.364380039457876,
+        4.421535904261917,
+        4.385690388667187
+      ],
+      "source_record_hashes": [
+        "b3898185dea61f968b41fa72164da001ee194ebfb6263b02571eaf916a5d4be0",
+        "df662f2c44e073e6b759ee57d4ba81333c473c29d31eabd3ac8000af995f8755",
+        "a1d7618c60b4071aea0ae89e9990df64a79ec87d1744c07bebcb3eb1b3451641"
+      ],
+      "status": "completed",
+      "std_bpb": 0.028884323467851122,
+      "train_seconds": 0.3341841619999286,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "val_bpb": 4.390535444128993
+    },
+    {
+      "artifact_bytes_max": 90055,
+      "candidate_id": "cpu-694213472006",
+      "charge_seconds": 0.5711949250003272,
+      "config": {
+        "base_lr": 0.003,
+        "eval_seq_len": 64,
+        "lr_scale": 1.3,
+        "mlp_mult": 2,
+        "model_dim": 48,
+        "num_heads": 4,
+        "num_kv_heads": 4,
+        "num_layers": 2,
+        "tied_embeddings": true,
+        "train_batch_tokens": 256,
+        "train_seq_len": 64,
+        "vocab_size": 256,
+        "warmdown_fraction": 0.3
+      },
+      "end_to_end_seconds": 0.7377662399999281,
+      "feasible": true,
+      "metric": "mean_quantized_roundtrip_bpb",
+      "per_seed_quantized_bpb": [
+        4.434808640773305,
+        4.325095909761494,
+        4.457743144999464
+      ],
+      "source_record_hashes": [
+        "971908763d4c12c66ebc2c77c0dd0297b48d320a3218efd60d5ab6723bab6aa4",
+        "d242226c959d5b92810676cbc9433de44d6511e8e4f5720b038ae5f75e096582",
+        "614d20fd2f742ab4911905e3d1fb0a15a132ffd02c91e6d096776f6a02357aa0"
+      ],
+      "status": "completed",
+      "std_bpb": 0.07089683096637331,
+      "train_seconds": 0.5711949250003272,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "val_bpb": 4.4058825651780875
+    },
+    {
+      "artifact_bytes_max": 100825,
+      "candidate_id": "cpu-8d33ca7ae4af",
+      "charge_seconds": 0.5822893989998192,
+      "config": {
+        "base_lr": 0.003,
+        "eval_seq_len": 64,
+        "lr_scale": 0.7,
+        "mlp_mult": 2,
+        "model_dim": 48,
+        "num_heads": 4,
+        "num_kv_heads": 4,
+        "num_layers": 2,
+        "tied_embeddings": false,
+        "train_batch_tokens": 256,
+        "train_seq_len": 64,
+        "vocab_size": 256,
+        "warmdown_fraction": 0.3
+      },
+      "end_to_end_seconds": 0.7571378770001047,
+      "feasible": true,
+      "metric": "mean_quantized_roundtrip_bpb",
+      "per_seed_quantized_bpb": [
+        4.281266250524008,
+        4.231696049070522,
+        4.30632832053534
+      ],
+      "source_record_hashes": [
+        "acd4dacdad12beee492d8c7e0a23c576f88f16bfe406eb170b18f7c183cbc3d9",
+        "dc561ab4f9e88a563efdf2a64f632386f9044670510190c7b477d533ee8e0721",
+        "0434ab447ffd461d2f45b28b4e979e122ac0b92074e9081aa36c7b9569677bac"
+      ],
+      "status": "completed",
+      "std_bpb": 0.03798089030330555,
+      "train_seconds": 0.5822893989998192,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "val_bpb": 4.273096873376623
+    },
+    {
+      "artifact_bytes_max": 82342,
+      "candidate_id": "cpu-9280a20a7de3",
+      "charge_seconds": 0.7458677140000418,
+      "config": {
+        "base_lr": 0.003,
+        "eval_seq_len": 64,
+        "lr_scale": 0.7,
+        "mlp_mult": 2,
+        "model_dim": 32,
+        "num_heads": 4,
+        "num_kv_heads": 4,
+        "num_layers": 3,
+        "tied_embeddings": false,
+        "train_batch_tokens": 256,
+        "train_seq_len": 64,
+        "vocab_size": 256,
+        "warmdown_fraction": 0.3
+      },
+      "end_to_end_seconds": 0.949721049000118,
+      "feasible": true,
+      "metric": "mean_quantized_roundtrip_bpb",
+      "per_seed_quantized_bpb": [
+        4.675604638914339,
+        4.734884208668535,
+        4.691956875712975
+      ],
+      "source_record_hashes": [
+        "94b79dbaf661eab5a2e7f237321d2c26858b03f180705441769fdabd4f0f7642",
+        "072f933938e66fcee15283670b1ef7a237b8c12c9ccdac756e2d344953139da0",
+        "40a7b6e7a2b695921fdf8c12c42f02dbd22f4e78785e58aad2256e902e1fab5a"
+      ],
+      "status": "completed",
+      "std_bpb": 0.030616495970959657,
+      "train_seconds": 0.7458677140000418,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "val_bpb": 4.700815241098616
+    },
+    {
+      "artifact_bytes_max": 118542,
+      "candidate_id": "cpu-a4570056857a",
+      "charge_seconds": 0.8082780760003061,
+      "config": {
+        "base_lr": 0.003,
+        "eval_seq_len": 64,
+        "lr_scale": 0.7,
+        "mlp_mult": 2,
+        "model_dim": 48,
+        "num_heads": 4,
+        "num_kv_heads": 4,
+        "num_layers": 3,
+        "tied_embeddings": false,
+        "train_batch_tokens": 256,
+        "train_seq_len": 64,
+        "vocab_size": 256,
+        "warmdown_fraction": 0.3
+      },
+      "end_to_end_seconds": 1.0675662179999108,
+      "feasible": true,
+      "metric": "mean_quantized_roundtrip_bpb",
+      "per_seed_quantized_bpb": [
+        4.2642200531995895,
+        4.223278291536892,
+        4.284160367553027
+      ],
+      "source_record_hashes": [
+        "44960942c262d1bd28574794ca526f473b978249d1e3eb9c20b5ef2d0618271a",
+        "abed0b8f5b1364193ad5fd7152326dd016ff780689dca5be723b080bed04d008",
+        "90649844df0282c3d6b5974dbc188575aac904d7ee6c13b71199a275f45a4632"
+      ],
+      "status": "completed",
+      "std_bpb": 0.03103887660282794,
+      "train_seconds": 0.8082780760003061,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "val_bpb": 4.257219570763169
+    },
+    {
+      "artifact_bytes_max": 66241,
+      "candidate_id": "cpu-aba1c2fff243",
+      "charge_seconds": 0.5182928320000428,
+      "config": {
+        "base_lr": 0.003,
+        "eval_seq_len": 64,
+        "lr_scale": 0.7,
+        "mlp_mult": 2,
+        "model_dim": 32,
+        "num_heads": 4,
+        "num_kv_heads": 4,
+        "num_layers": 2,
+        "tied_embeddings": true,
+        "train_batch_tokens": 256,
+        "train_seq_len": 64,
+        "vocab_size": 256,
+        "warmdown_fraction": 0.3
+      },
+      "end_to_end_seconds": 0.6754158809999353,
+      "feasible": true,
+      "metric": "mean_quantized_roundtrip_bpb",
+      "per_seed_quantized_bpb": [
+        4.6984410287931055,
+        4.701504594361274,
+        4.714889456541324
+      ],
+      "source_record_hashes": [
+        "97b96bb149951120b10bb91832912df214b1108ca3e81ea60cf8d2b55381fc02",
+        "afcacfc65b2cacbb75f02dedfdd7ee9398c0ba870de6c41e1492a9e2766b9260",
+        "a5a29704d8760d742f65a43e4e45245ceb6f78dc5014253b37f4d0b386d1017d"
+      ],
+      "status": "completed",
+      "std_bpb": 0.008747292390198776,
+      "train_seconds": 0.5182928320000428,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "val_bpb": 4.704945026565235
+    },
+    {
+      "artifact_bytes_max": 118463,
+      "candidate_id": "cpu-ac775bf3dfda",
+      "charge_seconds": 0.7867773859998124,
+      "config": {
+        "base_lr": 0.003,
+        "eval_seq_len": 64,
+        "lr_scale": 1.3,
+        "mlp_mult": 2,
+        "model_dim": 48,
+        "num_heads": 4,
+        "num_kv_heads": 4,
+        "num_layers": 3,
+        "tied_embeddings": false,
+        "train_batch_tokens": 256,
+        "train_seq_len": 64,
+        "vocab_size": 256,
+        "warmdown_fraction": 0.3
+      },
+      "end_to_end_seconds": 1.009119526999939,
+      "feasible": true,
+      "metric": "mean_quantized_roundtrip_bpb",
+      "per_seed_quantized_bpb": [
+        3.8797051172749417,
+        3.749156042298698,
+        3.979421444451602
+      ],
+      "source_record_hashes": [
+        "ea0fa6f6adefa5139d20808c58965e2733d68890d7c2b121cc3cc4c936b9e1d2",
+        "17d0f6b89cf3f889574d9b46c119701b7a6fa4a204f4e1ded75e01429904ced3",
+        "e338ee7c1723625b4d4708fa45b33851edb0b3b45ca5520a03726b49af1fd3f3"
+      ],
+      "status": "completed",
+      "std_bpb": 0.11547623298857813,
+      "train_seconds": 0.7867773859998124,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "val_bpb": 3.8694275346750806
+    },
+    {
+      "artifact_bytes_max": 82042,
+      "candidate_id": "cpu-b543836e46ba",
+      "charge_seconds": 0.3527399020001667,
+      "config": {
+        "base_lr": 0.003,
+        "eval_seq_len": 64,
+        "lr_scale": 1.3,
+        "mlp_mult": 2,
+        "model_dim": 48,
+        "num_heads": 4,
+        "num_kv_heads": 4,
+        "num_layers": 1,
+        "tied_embeddings": false,
+        "train_batch_tokens": 256,
+        "train_seq_len": 64,
+        "vocab_size": 256,
+        "warmdown_fraction": 0.3
+      },
+      "end_to_end_seconds": 0.4628889580001214,
+      "feasible": true,
+      "metric": "mean_quantized_roundtrip_bpb",
+      "per_seed_quantized_bpb": [
+        3.521395620103362,
+        3.5429400973679472,
+        3.5955203181177335
+      ],
+      "source_record_hashes": [
+        "931d74dd3d9d7b7188dda89940c01c445908353c9318ec7b6ea7224f4b239c11",
+        "8fac6f53a64d0084822a8673b977d366bb94860e41a55b9ee2a753f16dfd6ccc",
+        "f22f4aa02ad9971f8f8bd9711eb32b9f85be6c8a546518284855fe1fb4950e10"
+      ],
+      "status": "completed",
+      "std_bpb": 0.038129854817501065,
+      "train_seconds": 0.3527399020001667,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "val_bpb": 3.5532853451963478
+    },
+    {
+      "artifact_bytes_max": 57351,
+      "candidate_id": "cpu-b8a2daf9e058",
+      "charge_seconds": 0.371374342000081,
+      "config": {
+        "base_lr": 0.003,
+        "eval_seq_len": 64,
+        "lr_scale": 0.7,
+        "mlp_mult": 2,
+        "model_dim": 32,
+        "num_heads": 4,
+        "num_kv_heads": 4,
+        "num_layers": 1,
+        "tied_embeddings": true,
+        "train_batch_tokens": 256,
+        "train_seq_len": 64,
+        "vocab_size": 256,
+        "warmdown_fraction": 0.3
+      },
+      "end_to_end_seconds": 0.4613077940000494,
+      "feasible": true,
+      "metric": "mean_quantized_roundtrip_bpb",
+      "per_seed_quantized_bpb": [
+        4.698607816865942,
+        4.6547162789726455,
+        4.724887116902781
+      ],
+      "source_record_hashes": [
+        "975e19fc7411e2718fa3bb683d9e67e614aebdfbd6af355e8d14aa5ec8586f36",
+        "08155186bd8e0567560f788460dae2501e0c6b2bd139ba9784bd87c0cf72d26a",
+        "c374289352633a5f8526e27d40bb9bd277eca8fcf79eb2ff16ba9aac7020c94c"
+      ],
+      "status": "completed",
+      "std_bpb": 0.035451881014698775,
+      "train_seconds": 0.371374342000081,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "val_bpb": 4.69273707091379
+    },
+    {
+      "artifact_bytes_max": 73269,
+      "candidate_id": "cpu-c8cc49292cb0",
+      "charge_seconds": 0.5544865090000712,
+      "config": {
+        "base_lr": 0.003,
+        "eval_seq_len": 64,
+        "lr_scale": 0.7,
+        "mlp_mult": 2,
+        "model_dim": 32,
+        "num_heads": 4,
+        "num_kv_heads": 4,
+        "num_layers": 2,
+        "tied_embeddings": false,
+        "train_batch_tokens": 256,
+        "train_seq_len": 64,
+        "vocab_size": 256,
+        "warmdown_fraction": 0.3
+      },
+      "end_to_end_seconds": 0.6961998920000951,
+      "feasible": true,
+      "metric": "mean_quantized_roundtrip_bpb",
+      "per_seed_quantized_bpb": [
+        4.656080262847088,
+        4.659570155857496,
+        4.636637322319946
+      ],
+      "source_record_hashes": [
+        "6a889ce9cda3c192216ea3e73c0ac49cad54abc4fd850026e8806fc6c69c6aca",
+        "ae77d0e7515c85cf2708d0e12d77ca83f1b9e6c459eef55b2903ebb9f4bf7ee1",
+        "d0f4e784c9c3ca20212ce9be551bfb17f2a47a315d743e5392a33bd26d6c0e94"
+      ],
+      "status": "completed",
+      "std_bpb": 0.012356659092887662,
+      "train_seconds": 0.5544865090000712,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "val_bpb": 4.65076258034151
+    },
+    {
+      "artifact_bytes_max": 82434,
+      "candidate_id": "cpu-fa95c4c7ef67",
+      "charge_seconds": 0.4076678499998252,
+      "config": {
+        "base_lr": 0.003,
+        "eval_seq_len": 64,
+        "lr_scale": 0.7,
+        "mlp_mult": 2,
+        "model_dim": 48,
+        "num_heads": 4,
+        "num_kv_heads": 4,
+        "num_layers": 1,
+        "tied_embeddings": false,
+        "train_batch_tokens": 256,
+        "train_seq_len": 64,
+        "vocab_size": 256,
+        "warmdown_fraction": 0.3
+      },
+      "end_to_end_seconds": 1.7682526079997842,
+      "feasible": true,
+      "metric": "mean_quantized_roundtrip_bpb",
+      "per_seed_quantized_bpb": [
+        4.158270513179659,
+        4.182686040738948,
+        4.200447819265255
+      ],
+      "source_record_hashes": [
+        "063132b96bf7c7e5a16960513685653a1034f93ed9dfdc22f7f7b5c9d3910eb2",
+        "dcbed88c209f1299c0593967a2cbb5ec376e68bb94505b829741ec8da0c8a8e3",
+        "bd7dbc4064c727ebc4d7ae331c42a1c001fbc579e22ff0b766388ffded9ecdf4"
+      ],
+      "status": "completed",
+      "std_bpb": 0.02117594512276489,
+      "train_seconds": 0.4076678499998252,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "val_bpb": 4.18046812439462
+    },
+    {
+      "artifact_bytes_max": 100488,
+      "candidate_id": "cpu-fb3921d96067",
+      "charge_seconds": 0.6359240530000534,
+      "config": {
+        "base_lr": 0.003,
+        "eval_seq_len": 64,
+        "lr_scale": 1.3,
+        "mlp_mult": 2,
+        "model_dim": 48,
+        "num_heads": 4,
+        "num_kv_heads": 4,
+        "num_layers": 2,
+        "tied_embeddings": false,
+        "train_batch_tokens": 256,
+        "train_seq_len": 64,
+        "vocab_size": 256,
+        "warmdown_fraction": 0.3
+      },
+      "end_to_end_seconds": 0.80229231300018,
+      "feasible": true,
+      "metric": "mean_quantized_roundtrip_bpb",
+      "per_seed_quantized_bpb": [
+        3.784447675481851,
+        3.6540254394655443,
+        3.856996619311117
+      ],
+      "source_record_hashes": [
+        "9119d53ae9cdaa6bdd58dbb941668215fe32196fd306a8e866f41ee3b9c9a84c",
+        "3aaad8a1ab0a34f819588e287056f1af7650a6c0512aec3c114ae9c690139349",
+        "a5ea00d114d1060330d164efe46ced116784e7712440d99ca91b3ffc31bfc8d5"
+      ],
+      "status": "completed",
+      "std_bpb": 0.10285151817558742,
+      "train_seconds": 0.6359240530000534,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "val_bpb": 3.7651565780861707
+    }
+  ],
+  "schema_version": 1,
+  "score_source": "measured_training_only",
+  "space_id": "8cb9df35f29944ef2410177174b4981189ec039ad638e43a67d9d77f3fa91988",
+  "table_id": "44d569567c150a918d69044bc60936081260a0bde63040fe5caa6070c0f041d2",
+  "time_policy": "fixed_steps_with_cap",
+  "train_budget_seconds": 10.0,
+  "training_seeds": [
+    0,
+    1,
+    2
+  ]
+}

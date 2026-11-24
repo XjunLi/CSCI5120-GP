@@ -1,0 +1,122 @@
+{
+  "actual_config": {
+    "base_lr": 0.003,
+    "eval_seq_len": 64,
+    "lr_scale": 0.7,
+    "mlp_mult": 2,
+    "model_dim": 32,
+    "num_heads": 4,
+    "num_kv_heads": 4,
+    "num_layers": 1,
+    "seq_len": 64,
+    "tied_embeddings": true,
+    "train_batch_tokens": 256,
+    "train_seq_len": 64,
+    "vocab_size": 256,
+    "warmdown_fraction": 0.3
+  },
+  "artifact_bytes": 57303,
+  "artifact_file": "model.int8.ptz",
+  "backend": "cpu_tiny_lm",
+  "budget_compliant": true,
+  "budget_overshoot_seconds": 0.0,
+  "budget_tolerance_seconds": 0.0,
+  "candidate_id": "cpu-b8a2daf9e058",
+  "code_bytes": 36977,
+  "compile_warmup_seconds": 0.0,
+  "config": {
+    "base_lr": 0.003,
+    "eval_seq_len": 64,
+    "lr_scale": 0.7,
+    "mlp_mult": 2,
+    "model_dim": 32,
+    "num_heads": 4,
+    "num_kv_heads": 4,
+    "num_layers": 1,
+    "tied_embeddings": true,
+    "train_batch_tokens": 256,
+    "train_seq_len": 64,
+    "vocab_size": 256,
+    "warmdown_fraction": 0.3
+  },
+  "data_protocol": "authored_byte_fixture",
+  "device_class": "cpu",
+  "end_to_end_seconds": 0.18613393400005407,
+  "evaluation_fingerprint": "dea6f79fc90465826e363dfbd6fee9225491e4f1999661b9195501805e5ed29b",
+  "evaluation_seconds": 0.021602515000040512,
+  "execution_fingerprint": "a4929b37f5267ba6b0cf452658244b91ea66b091e9a5023c214f8398d2fb7668",
+  "export_seconds": 0.003409972000099515,
+  "hardware": {
+    "architecture": "x86_64",
+    "device_name": "AMD EPYC 9V74 80-Core Processor",
+    "device_type": "cpu",
+    "threads": 1
+  },
+  "hardware_fingerprint": "3f8289fbb6722a7b23293fb3a0e42ba0d6f0827ad17975babf96e58329268cd9",
+  "learning_rate_schedule": "linear_step_fraction_warmdown",
+  "max_steps": 40,
+  "model_bytes": 20326,
+  "model_sha256": "2e893915657255a9576c1ca789229a468cffbe53375445701a465b9b450b4cee",
+  "optimizer": "AdamW",
+  "overhead_seconds": 0.029573653999932503,
+  "parameter_count": 18848,
+  "provenance": {
+    "claim_scope": "pipeline_smoke_only",
+    "data_source": "authored_test_fixture",
+    "dataset_fingerprint": "82ea0b50b4e5518e9142ea2ae61f2c8e3afa29e44da8ed0557bbe357f65c20bd",
+    "evaluation_data_sha256": "52be939ac47145dd7468b5d68540a46b7c5504d8cde902f932177dd368e50422",
+    "execution_context": {
+      "backend": "cpu_tiny_lm",
+      "data_manifest_sha256": "4835e7501422a0961a39db3c9d865b9d3b6f1882cf5817e518b142de188bb161",
+      "dataset_fingerprint": "82ea0b50b4e5518e9142ea2ae61f2c8e3afa29e44da8ed0557bbe357f65c20bd",
+      "implementation_sha256": "a6f0be56c1e50ecc6fd68156ba117937bb2b2234e371cf25f5e549b7abd8aa79",
+      "schema": "golfbench.execution.v1",
+      "software": {
+        "cuda": null,
+        "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+        "python": "3.12.14",
+        "torch": "2.15.0+cpu"
+      },
+      "source_hashes": {
+        "prepare_data.py": "385c4ca0d3fe06452ce0a14833d54fb7ee0b681a2d08306afbaf477b6c09c749",
+        "train.py": "9f6f1cf6020334d2105e203675070d51697b550b5b4138d09ebdb261f321b438",
+        "training.py": "87a7127e18bbe6875fcc77832be74bbb6517c9f08fb3f25412c5baba67d67231"
+      },
+      "verified_data": [
+        {
+          "role": "train",
+          "sha256": "01cfa9c9af05a80992416d5dfa0165e423f6ee873a85b268bbe0ff54841c4e44"
+        },
+        {
+          "role": "search",
+          "sha256": "52be939ac47145dd7468b5d68540a46b7c5504d8cde902f932177dd368e50422"
+        },
+        {
+          "role": "confirm",
+          "sha256": "1279500264e21201f2a34e0a240f5e29663e9e007f8abe383f386c2d825676ca"
+        }
+      ]
+    },
+    "implementation_sha256": "87a7127e18bbe6875fcc77832be74bbb6517c9f08fb3f25412c5baba67d67231",
+    "training_data_sha256": "01cfa9c9af05a80992416d5dfa0165e423f6ee873a85b268bbe0ff54841c4e44",
+    "upstream_commit": null
+  },
+  "quantized_bpb": 4.6547162789726455,
+  "schema": "golfbench.measurement.v1",
+  "software": {
+    "cuda": null,
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.12.14",
+    "torch": "2.15.0+cpu"
+  },
+  "software_fingerprint": "b1bd05d778280437b8cbe5e304c65e566016c8f071655d34d7e055f31048a4f6",
+  "split": "search",
+  "status": "completed",
+  "steps": 40,
+  "stop_reason": "max_steps",
+  "tokens_seen": 10240,
+  "train_budget_seconds": 10.0,
+  "train_seconds": 0.15656028000012157,
+  "training_seed": 1,
+  "val_bpb": 4.65463346757133
+}

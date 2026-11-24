@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-24",
+  "timezone": "Asia/Shanghai",
+  "new_tests": {
+    "command": ".venv/bin/python -m pytest tests -q",
+    "passed": 55,
+    "subtests_passed": 67,
+    "seconds": 7.09
+  },
+  "preserved_nas_tests": {
+    "command": "cd legacy/nas && ../../.venv/bin/python -m unittest discover -s tests -v",
+    "passed": 50,
+    "subtree_unchanged_after_validation": true
+  },
+  "gpu_training_runs": 0,
+  "pretrained_policy_experiment_runs": 0,
+  "cpu_training_records": 90,
+  "baseline_replays": 480,
+  "harness_factorial_replays": 600,
+  "exact_archive_only_recovery_records": 1080,
+  "compressed_models_verified_against_recorded_sha256_and_size": 90,
+  "original_nas_tree_sha": "6164615e1cc4f1df5e464a4d02262ef17152af90",
+  "harness_source_sha256": "7d52471a179b6a9a4aeb3780211e903d5fd8be2ce798b1438094ca183a018269",
+  "table_id": "44d569567c150a918d69044bc60936081260a0bde63040fe5caa6070c0f041d2",
+  "additional_checks": [
+    "H200 manifest: 72 one-GPU jobs of 600 seconds, no default long jobs",
+    "H200 wrapper dry run and shell syntax",
+    "Eight-shard source and prepared-manifest boundaries, no deletion",
+    "All 90 artifact checksums and byte sizes match",
+    "Source snapshots match both replay cohorts",
+    "105 tests passed; final new test suite includes 67 additional passing subtests"
+  ]
+}

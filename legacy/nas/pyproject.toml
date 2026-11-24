@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nas-agent-bench"
+version = "0.1.0"
+description = "Budgeted, validation-only NAS agent evaluation"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+plots = ["numpy", "matplotlib"]
+nats = ["nats-bench"]
+adaptation = ["numpy>=1.24"]
+llm = ["numpy>=1.24", "torch>=2.6", "transformers>=4.57,<5", "safetensors>=0.4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

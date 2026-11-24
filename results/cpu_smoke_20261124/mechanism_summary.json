@@ -1,0 +1,62 @@
+{
+  "replay_attempts": {
+    "harness": {
+      "complete_trials": 60,
+      "different_candidate_sets": 12,
+      "different_trajectories": 12,
+      "different_winners": 3,
+      "incomplete_trials": 0,
+      "promotions": 30,
+      "runs": 30,
+      "runs_with_promotions": 21
+    },
+    "multiagent": {
+      "descendants": 30,
+      "different_candidate_sets": 20,
+      "different_trajectories": 22,
+      "different_winners": 0,
+      "runs": 30
+    },
+    "weight": {
+      "different_candidate_sets": 7,
+      "different_trajectories": 9,
+      "different_winners": 0,
+      "gradient_updates": 240,
+      "policy_kind": [
+        "numpy_linear_softmax_over_public_design_features"
+      ],
+      "runs": 30,
+      "runs_with_changed_weights": 30
+    }
+  },
+  "replay_cost": {
+    "harness": {
+      "complete_trials": 45,
+      "different_candidate_sets": 12,
+      "different_trajectories": 12,
+      "different_winners": 4,
+      "incomplete_trials": 30,
+      "promotions": 21,
+      "runs": 30,
+      "runs_with_promotions": 17
+    },
+    "multiagent": {
+      "descendants": 30,
+      "different_candidate_sets": 18,
+      "different_trajectories": 19,
+      "different_winners": 0,
+      "runs": 30
+    },
+    "weight": {
+      "different_candidate_sets": 7,
+      "different_trajectories": 8,
+      "different_winners": 0,
+      "gradient_updates": 230,
+      "policy_kind": [
+        "numpy_linear_softmax_over_public_design_features"
+      ],
+      "runs": 30,
+      "runs_with_changed_weights": 30
+    }
+  }
+}

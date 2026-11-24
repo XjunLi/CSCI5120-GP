@@ -1,0 +1,21 @@
+{
+  "commit": "f5c079314c4877fbb0af378c0abade5a8ca33d3a",
+  "files": {
+    "LICENSE": "7de1e115d165f176e68f962acdb809b5ab8d8ae78d3981e0701392b2ac50c713",
+    "README.upstream.md": "1b1a562f5efa0d87abd66df2ff485325bcad0b25d575986cbc6bc6af1a8b77b5",
+    "THIRD_PARTY_NOTICES.md": "197bd74c0c267ff8fcd37816b6a0b5854ce2c758f2c1f39d3619ce7c82d74b23",
+    "data/README.md": "82f21538d4d39342bc171f8b869ff2663ce0acb57a6d0f00126409f5e572a13c",
+    "data/cached_challenge_fineweb.py": "116dfe51a66ab32935df1820cb16f445aa84386f1688e1cf4c4dc9fff390531b",
+    "train_gpt.py": "c6cae5e767aa0464e8767620f3bbdb08048c99f4b7ae0f0e146dd9b17e68e673"
+  },
+  "license": "MIT",
+  "note": "Vendored sources are unmodified. Runtime patches are written per run and hashed. No GPU result is implied.",
+  "repository": "https://github.com/openai/parameter-golf",
+  "retrieved_at": "2026-11-24",
+  "runtime_patches": [
+    "wallclock-fraction LR warmdown",
+    "synchronized time target check after the current step",
+    "separate measured timing and exact result output"
+  ],
+  "schema": "golfbench.upstream.v1"
+}

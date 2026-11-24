@@ -1,0 +1,436 @@
+{
+  "backend": "parameter_golf",
+  "candidates": [
+    {
+      "candidate_id": "gpu-de84d7550450",
+      "config": {
+        "eval_seq_len": 1024,
+        "lr_scale": 0.7,
+        "mlp_mult": 2,
+        "model_dim": 256,
+        "num_heads": 4,
+        "num_kv_heads": 2,
+        "num_layers": 4,
+        "tied_embeddings": true,
+        "train_batch_tokens": 524288,
+        "train_seq_len": 1024,
+        "vocab_size": 1024,
+        "warmdown_fraction": 0.3
+      }
+    },
+    {
+      "candidate_id": "gpu-09fb310199f3",
+      "config": {
+        "eval_seq_len": 1024,
+        "lr_scale": 1.3,
+        "mlp_mult": 2,
+        "model_dim": 256,
+        "num_heads": 4,
+        "num_kv_heads": 2,
+        "num_layers": 4,
+        "tied_embeddings": true,
+        "train_batch_tokens": 524288,
+        "train_seq_len": 1024,
+        "vocab_size": 1024,
+        "warmdown_fraction": 0.3
+      }
+    },
+    {
+      "candidate_id": "gpu-e47976d6a2e2",
+      "config": {
+        "eval_seq_len": 1024,
+        "lr_scale": 0.7,
+        "mlp_mult": 2,
+        "model_dim": 256,
+        "num_heads": 4,
+        "num_kv_heads": 2,
+        "num_layers": 4,
+        "tied_embeddings": false,
+        "train_batch_tokens": 524288,
+        "train_seq_len": 1024,
+        "vocab_size": 1024,
+        "warmdown_fraction": 0.3
+      }
+    },
+    {
+      "candidate_id": "gpu-dacd37cbda0d",
+      "config": {
+        "eval_seq_len": 1024,
+        "lr_scale": 1.3,
+        "mlp_mult": 2,
+        "model_dim": 256,
+        "num_heads": 4,
+        "num_kv_heads": 2,
+        "num_layers": 4,
+        "tied_embeddings": false,
+        "train_batch_tokens": 524288,
+        "train_seq_len": 1024,
+        "vocab_size": 1024,
+        "warmdown_fraction": 0.3
+      }
+    },
+    {
+      "candidate_id": "gpu-d10ed4a86238",
+      "config": {
+        "eval_seq_len": 1024,
+        "lr_scale": 0.7,
+        "mlp_mult": 2,
+        "model_dim": 384,
+        "num_heads": 6,
+        "num_kv_heads": 3,
+        "num_layers": 4,
+        "tied_embeddings": true,
+        "train_batch_tokens": 524288,
+        "train_seq_len": 1024,
+        "vocab_size": 1024,
+        "warmdown_fraction": 0.3
+      }
+    },
+    {
+      "candidate_id": "gpu-2b2d4a8e2c5a",
+      "config": {
+        "eval_seq_len": 1024,
+        "lr_scale": 1.3,
+        "mlp_mult": 2,
+        "model_dim": 384,
+        "num_heads": 6,
+        "num_kv_heads": 3,
+        "num_layers": 4,
+        "tied_embeddings": true,
+        "train_batch_tokens": 524288,
+        "train_seq_len": 1024,
+        "vocab_size": 1024,
+        "warmdown_fraction": 0.3
+      }
+    },
+    {
+      "candidate_id": "gpu-1a14300baa35",
+      "config": {
+        "eval_seq_len": 1024,
+        "lr_scale": 0.7,
+        "mlp_mult": 2,
+        "model_dim": 384,
+        "num_heads": 6,
+        "num_kv_heads": 3,
+        "num_layers": 4,
+        "tied_embeddings": false,
+        "train_batch_tokens": 524288,
+        "train_seq_len": 1024,
+        "vocab_size": 1024,
+        "warmdown_fraction": 0.3
+      }
+    },
+    {
+      "candidate_id": "gpu-173e0fa98ebc",
+      "config": {
+        "eval_seq_len": 1024,
+        "lr_scale": 1.3,
+        "mlp_mult": 2,
+        "model_dim": 384,
+        "num_heads": 6,
+        "num_kv_heads": 3,
+        "num_layers": 4,
+        "tied_embeddings": false,
+        "train_batch_tokens": 524288,
+        "train_seq_len": 1024,
+        "vocab_size": 1024,
+        "warmdown_fraction": 0.3
+      }
+    },
+    {
+      "candidate_id": "gpu-90b6d2cd7ac7",
+      "config": {
+        "eval_seq_len": 1024,
+        "lr_scale": 0.7,
+        "mlp_mult": 2,
+        "model_dim": 256,
+        "num_heads": 4,
+        "num_kv_heads": 2,
+        "num_layers": 6,
+        "tied_embeddings": true,
+        "train_batch_tokens": 524288,
+        "train_seq_len": 1024,
+        "vocab_size": 1024,
+        "warmdown_fraction": 0.3
+      }
+    },
+    {
+      "candidate_id": "gpu-1d0ceabf558c",
+      "config": {
+        "eval_seq_len": 1024,
+        "lr_scale": 1.3,
+        "mlp_mult": 2,
+        "model_dim": 256,
+        "num_heads": 4,
+        "num_kv_heads": 2,
+        "num_layers": 6,
+        "tied_embeddings": true,
+        "train_batch_tokens": 524288,
+        "train_seq_len": 1024,
+        "vocab_size": 1024,
+        "warmdown_fraction": 0.3
+      }
+    },
+    {
+      "candidate_id": "gpu-9383db029652",
+      "config": {
+        "eval_seq_len": 1024,
+        "lr_scale": 0.7,
+        "mlp_mult": 2,
+        "model_dim": 256,
+        "num_heads": 4,
+        "num_kv_heads": 2,
+        "num_layers": 6,
+        "tied_embeddings": false,
+        "train_batch_tokens": 524288,
+        "train_seq_len": 1024,
+        "vocab_size": 1024,
+        "warmdown_fraction": 0.3
+      }
+    },
+    {
+      "candidate_id": "gpu-426bb1d0c103",
+      "config": {
+        "eval_seq_len": 1024,
+        "lr_scale": 1.3,
+        "mlp_mult": 2,
+        "model_dim": 256,
+        "num_heads": 4,
+        "num_kv_heads": 2,
+        "num_layers": 6,
+        "tied_embeddings": false,
+        "train_batch_tokens": 524288,
+        "train_seq_len": 1024,
+        "vocab_size": 1024,
+        "warmdown_fraction": 0.3
+      }
+    },
+    {
+      "candidate_id": "gpu-b5360fad15a5",
+      "config": {
+        "eval_seq_len": 1024,
+        "lr_scale": 0.7,
+        "mlp_mult": 2,
+        "model_dim": 384,
+        "num_heads": 6,
+        "num_kv_heads": 3,
+        "num_layers": 6,
+        "tied_embeddings": true,
+        "train_batch_tokens": 524288,
+        "train_seq_len": 1024,
+        "vocab_size": 1024,
+        "warmdown_fraction": 0.3
+      }
+    },
+    {
+      "candidate_id": "gpu-72586161d351",
+      "config": {
+        "eval_seq_len": 1024,
+        "lr_scale": 1.3,
+        "mlp_mult": 2,
+        "model_dim": 384,
+        "num_heads": 6,
+        "num_kv_heads": 3,
+        "num_layers": 6,
+        "tied_embeddings": true,
+        "train_batch_tokens": 524288,
+        "train_seq_len": 1024,
+        "vocab_size": 1024,
+        "warmdown_fraction": 0.3
+      }
+    },
+    {
+      "candidate_id": "gpu-59d530275303",
+      "config": {
+        "eval_seq_len": 1024,
+        "lr_scale": 0.7,
+        "mlp_mult": 2,
+        "model_dim": 384,
+        "num_heads": 6,
+        "num_kv_heads": 3,
+        "num_layers": 6,
+        "tied_embeddings": false,
+        "train_batch_tokens": 524288,
+        "train_seq_len": 1024,
+        "vocab_size": 1024,
+        "warmdown_fraction": 0.3
+      }
+    },
+    {
+      "candidate_id": "gpu-6d5abc3a1cbe",
+      "config": {
+        "eval_seq_len": 1024,
+        "lr_scale": 1.3,
+        "mlp_mult": 2,
+        "model_dim": 384,
+        "num_heads": 6,
+        "num_kv_heads": 3,
+        "num_layers": 6,
+        "tied_embeddings": false,
+        "train_batch_tokens": 524288,
+        "train_seq_len": 1024,
+        "vocab_size": 1024,
+        "warmdown_fraction": 0.3
+      }
+    },
+    {
+      "candidate_id": "gpu-79a398fda7bb",
+      "config": {
+        "eval_seq_len": 1024,
+        "lr_scale": 0.7,
+        "mlp_mult": 2,
+        "model_dim": 256,
+        "num_heads": 4,
+        "num_kv_heads": 2,
+        "num_layers": 8,
+        "tied_embeddings": true,
+        "train_batch_tokens": 524288,
+        "train_seq_len": 1024,
+        "vocab_size": 1024,
+        "warmdown_fraction": 0.3
+      }
+    },
+    {
+      "candidate_id": "gpu-94b7b4afe1c6",
+      "config": {
+        "eval_seq_len": 1024,
+        "lr_scale": 1.3,
+        "mlp_mult": 2,
+        "model_dim": 256,
+        "num_heads": 4,
+        "num_kv_heads": 2,
+        "num_layers": 8,
+        "tied_embeddings": true,
+        "train_batch_tokens": 524288,
+        "train_seq_len": 1024,
+        "vocab_size": 1024,
+        "warmdown_fraction": 0.3
+      }
+    },
+    {
+      "candidate_id": "gpu-610a77d112cd",
+      "config": {
+        "eval_seq_len": 1024,
+        "lr_scale": 0.7,
+        "mlp_mult": 2,
+        "model_dim": 256,
+        "num_heads": 4,
+        "num_kv_heads": 2,
+        "num_layers": 8,
+        "tied_embeddings": false,
+        "train_batch_tokens": 524288,
+        "train_seq_len": 1024,
+        "vocab_size": 1024,
+        "warmdown_fraction": 0.3
+      }
+    },
+    {
+      "candidate_id": "gpu-8988a8e984bd",
+      "config": {
+        "eval_seq_len": 1024,
+        "lr_scale": 1.3,
+        "mlp_mult": 2,
+        "model_dim": 256,
+        "num_heads": 4,
+        "num_kv_heads": 2,
+        "num_layers": 8,
+        "tied_embeddings": false,
+        "train_batch_tokens": 524288,
+        "train_seq_len": 1024,
+        "vocab_size": 1024,
+        "warmdown_fraction": 0.3
+      }
+    },
+    {
+      "candidate_id": "gpu-0d8a03fd02fe",
+      "config": {
+        "eval_seq_len": 1024,
+        "lr_scale": 0.7,
+        "mlp_mult": 2,
+        "model_dim": 384,
+        "num_heads": 6,
+        "num_kv_heads": 3,
+        "num_layers": 8,
+        "tied_embeddings": true,
+        "train_batch_tokens": 524288,
+        "train_seq_len": 1024,
+        "vocab_size": 1024,
+        "warmdown_fraction": 0.3
+      }
+    },
+    {
+      "candidate_id": "gpu-baac075bc911",
+      "config": {
+        "eval_seq_len": 1024,
+        "lr_scale": 1.3,
+        "mlp_mult": 2,
+        "model_dim": 384,
+        "num_heads": 6,
+        "num_kv_heads": 3,
+        "num_layers": 8,
+        "tied_embeddings": true,
+        "train_batch_tokens": 524288,
+        "train_seq_len": 1024,
+        "vocab_size": 1024,
+        "warmdown_fraction": 0.3
+      }
+    },
+    {
+      "candidate_id": "gpu-26f964775e88",
+      "config": {
+        "eval_seq_len": 1024,
+        "lr_scale": 0.7,
+        "mlp_mult": 2,
+        "model_dim": 384,
+        "num_heads": 6,
+        "num_kv_heads": 3,
+        "num_layers": 8,
+        "tied_embeddings": false,
+        "train_batch_tokens": 524288,
+        "train_seq_len": 1024,
+        "vocab_size": 1024,
+        "warmdown_fraction": 0.3
+      }
+    },
+    {
+      "candidate_id": "gpu-4ca55a7f8e2a",
+      "config": {
+        "eval_seq_len": 1024,
+        "lr_scale": 1.3,
+        "mlp_mult": 2,
+        "model_dim": 384,
+        "num_heads": 6,
+        "num_kv_heads": 3,
+        "num_layers": 8,
+        "tied_embeddings": false,
+        "train_batch_tokens": 524288,
+        "train_seq_len": 1024,
+        "vocab_size": 1024,
+        "warmdown_fraction": 0.3
+      }
+    }
+  ],
+  "factors": {
+    "lr_scale": [
+      0.7,
+      1.3
+    ],
+    "model_dim": [
+      256,
+      384
+    ],
+    "num_layers": [
+      4,
+      6,
+      8
+    ],
+    "tied_embeddings": [
+      true,
+      false
+    ]
+  },
+  "profile": "gpu",
+  "schema_version": 1,
+  "space_id": "a8bb2060e779c2495e76ea9e24339d091f4f8ecb952f0975768d42a47457bc62",
+  "upstream_commit": "f5c079314c4877fbb0af378c0abade5a8ca33d3a"
+}

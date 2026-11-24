@@ -1,0 +1,32 @@
+{
+  "backend": "cpu_tiny_lm",
+  "data_manifest_sha256": "4835e7501422a0961a39db3c9d865b9d3b6f1882cf5817e518b142de188bb161",
+  "dataset_fingerprint": "82ea0b50b4e5518e9142ea2ae61f2c8e3afa29e44da8ed0557bbe357f65c20bd",
+  "implementation_sha256": "a6f0be56c1e50ecc6fd68156ba117937bb2b2234e371cf25f5e549b7abd8aa79",
+  "schema": "golfbench.execution.v1",
+  "software": {
+    "cuda": null,
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.12.14",
+    "torch": "2.15.0+cpu"
+  },
+  "source_hashes": {
+    "prepare_data.py": "385c4ca0d3fe06452ce0a14833d54fb7ee0b681a2d08306afbaf477b6c09c749",
+    "train.py": "9f6f1cf6020334d2105e203675070d51697b550b5b4138d09ebdb261f321b438",
+    "training.py": "87a7127e18bbe6875fcc77832be74bbb6517c9f08fb3f25412c5baba67d67231"
+  },
+  "verified_data": [
+    {
+      "role": "train",
+      "sha256": "01cfa9c9af05a80992416d5dfa0165e423f6ee873a85b268bbe0ff54841c4e44"
+    },
+    {
+      "role": "search",
+      "sha256": "52be939ac47145dd7468b5d68540a46b7c5504d8cde902f932177dd368e50422"
+    },
+    {
+      "role": "confirm",
+      "sha256": "1279500264e21201f2a34e0a240f5e29663e9e007f8abe383f386c2d825676ca"
+    }
+  ]
+}

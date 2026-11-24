@@ -1,0 +1,28 @@
+{
+  "backend": "cpu_tiny_lm",
+  "budget_tolerance_seconds": 0.0,
+  "candidate_id": "cpu-4c10d5796924",
+  "config": {
+    "base_lr": 0.003,
+    "eval_seq_len": 64,
+    "lr_scale": 1.3,
+    "mlp_mult": 2,
+    "model_dim": 32,
+    "num_heads": 4,
+    "num_kv_heads": 4,
+    "num_layers": 1,
+    "tied_embeddings": true,
+    "train_batch_tokens": 256,
+    "train_seq_len": 64,
+    "vocab_size": 256,
+    "warmdown_fraction": 0.3
+  },
+  "device_class": "CPU",
+  "job_id": "afb115fc499b6f6b5c38",
+  "max_steps": 40,
+  "regime": "smoke",
+  "split": "search",
+  "time_policy": "fixed_steps_with_cap",
+  "train_budget_seconds": 10.0,
+  "training_seed": 2
+}
